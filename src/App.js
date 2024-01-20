@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [jazzState, setJazzState] = useState({});
+  const [handLandmarks, setHandLandmarks] = useState(null)
   
 
   useEffect(() => {
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <MainPage data={jazzState} />
+      <MainPage data={jazzState} handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks}/>
     </div>
   );
 }

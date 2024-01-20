@@ -5,16 +5,20 @@ import Sidebar from './components/Sidebar';
 import './MainPage.css';
 import HandGestureRecognition from './HandGestureRecognition';
 
-function MainPage({ data }) {
+function MainPage({ data, handLandmarks, setHandLandmarks }) {
 
+
+  if(handLandmarks != null){
+    // console.log("Landmarks from mainpage : \n", handLandmarks)
+  }
 
   return (
     <div className="MainPage">
       <JazzInputText />
 
-      <HandGestureRecognition />
-      {/* <FocusArea data={data}/> */}
-      {/* <Sidebar /> */}
+      
+      <FocusArea data={data}/>
+      <Sidebar handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks}/>
       {/* <Footer /> */}
     </div>
   );

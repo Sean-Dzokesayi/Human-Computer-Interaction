@@ -7,7 +7,7 @@
 // 7. Drawing utilities DONE
 // 8. Draw functions DONE
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect} from "react";
 // import logo from './logo.svg';
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
@@ -15,18 +15,30 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawHand } from "./utilities";
 
-function HandGestureRecognition() {
+function HandGestureRecognition({ handLandmarks, setHandLandmarks }) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const width = 140;
+  const height = 140;
 
-  const runHandpose = async () => {
-    const net = await handpose.load();
-    console.log("Handpose model loaded.");
-    //  Loop and detect hands
-    setInterval(() => {
-      detect(net);
-    }, 100);
-  };
+  useEffect(() => {
+    const runHandpose = async () => {
+      try {
+        console.log("loading model")
+        const net = await handpose.load();
+        console.log("Handpose model loaded.");
+        // Loop and detect hands
+        setInterval(() => {
+          detect(net);
+        }, 100);
+      } catch (error) {
+        console.error("Error loading Handpose model:", error);
+      }
+    };
+
+    runHandpose();
+  }, []); // Empty dependency array ensures this runs only once on component mount
+
 
   const detect = async (net) => {
     // Check data is available
@@ -51,10 +63,13 @@ function HandGestureRecognition() {
       // Make Detections
       const hand = await net.estimateHands(video);
       try{
-        console.log(hand[0]['landmarks']);
+        setHandLandmarks(hand[0]['landmarks'])
+        console.log("hand landmarks set");
+
+
       }
       catch{
-        console.log("no landmarks")
+        // console.log("no landmarks")
       }
       
       // Draw mesh
@@ -63,12 +78,9 @@ function HandGestureRecognition() {
     }
   };
 
-  runHandpose();
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <Webcam
+    <>
+      <Webcam
           ref={webcamRef}
           style={{
             position: "absolute",
@@ -78,8 +90,9 @@ function HandGestureRecognition() {
             right: 0,
             textAlign: "center",
             zindex: 9,
-            width: 640,
-            height: 480,
+            width: width,
+            height: height,
+            // display: "hidden"
           }}
         />
 
@@ -93,12 +106,12 @@ function HandGestureRecognition() {
             right: 0,
             textAlign: "center",
             zindex: 9,
-            width: 640,
-            height: 480,
+            width: width,
+            height: height,
+            // display: "none"
           }}
         />
-      </header>
-    </div>
+    </>
   );
 }
 
