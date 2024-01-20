@@ -50,8 +50,13 @@ function HandGestureRecognition() {
 
       // Make Detections
       const hand = await net.estimateHands(video);
-      console.log(hand[0]['landmarks']);
-
+      try{
+        console.log(hand[0]['landmarks']);
+      }
+      catch{
+        console.log("no landmarks")
+      }
+      
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
       drawHand(hand, ctx);
