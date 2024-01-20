@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import MainPage from './MainPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { jazzStateRef, handLandmarksRef } from './firebase/realtime_db';
+import { onValue } from 'firebase/database';
+import { useEffect, useState } from 'react';
+
 
 function App() {
+  const [jazzState, setJazzState] = useState({});
+  
+
+  useEffect(() => {
+    const fetchData = () => {
+      // onValue(jazzStateRef, (snapshot) => {
+      //   const data = snapshot.val();
+      //   console.log('Jazz State changed:', data);
+      //   setJazzState(data)
+
+      // });
+
+    };
+
+    fetchData();
+  }, []);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainPage data={jazzState} />
     </div>
   );
 }

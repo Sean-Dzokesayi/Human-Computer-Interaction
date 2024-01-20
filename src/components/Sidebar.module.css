@@ -1,0 +1,26 @@
+.SidebarContainer{
+    height: 50vh;
+    width: 10vw;
+    position: fixed;
+    bottom: 10vh;
+    right: 0;
+}
+
+.camera{
+    width: 5vh;
+    height: 5vh;
+    background-color: #F98E8E;
+    list-style-type: none;
+    margin: 1em;
+}
+.microphone{
+    width: 5vh;
+    height: 5vh;
+    background-color: #CAFBAB;
+    list-style-type: none;
+    margin: 1em;
+}
+.landmarks{
+    list-style-type: none;
+    margin: 0em;;
+}

@@ -1,0 +1,8 @@
+.footerContainer{
+    border: 1px solid red;
+    height: 9vh;
+    width: 100vw;
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+}

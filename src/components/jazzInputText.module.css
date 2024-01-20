@@ -1,0 +1,12 @@
+.textbox{
+    width: 60%;
+    margin: auto;
+    margin-top: 3%;;
+    padding: .8em;
+    border-radius: 1.5em;
+    outline: none;
+    border: 1px solid gray;
+    background-color: #D9D9D9;
+    font-weight: 500;
+    font-size: larger;
+}
