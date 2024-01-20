@@ -23,17 +23,23 @@ function HandGestureRecognition({ handLandmarks, setHandLandmarks }) {
 
   useEffect(() => {
     const runHandpose = async () => {
-      try {
-        console.log("loading model")
-        const net = await handpose.load();
-        console.log("Handpose model loaded.");
-        // Loop and detect hands
-        setInterval(() => {
-          detect(net);
-        }, 100);
-      } catch (error) {
-        console.error("Error loading Handpose model:", error);
+      let net = null;
+      while (net === null) {
+        try {
+          console.log("Loading model...");
+          net = await handpose.load();
+          console.log("Handpose model loaded.");
+        } catch (error) {
+          console.error("Error loading Handpose model:", error);
+          // Wait for a while before trying again
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+        }
       }
+
+      // Once the model is loaded, start detecting hands
+      setInterval(() => {
+        detect(net);
+      }, 100);
     };
 
     runHandpose();
