@@ -34,6 +34,8 @@ const fingerJoints = {
   
   // Drawing function
   export const drawHand = (predictions, ctx) => {
+    
+
     // Check if we have predictions
     if (predictions.length > 0) {
       // Loop through each prediction
