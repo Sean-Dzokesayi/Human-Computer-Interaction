@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './Sidebar.module.css'
-import { handLandmarksRef } from '../firebase/realtime_db';
-import { onValue } from 'firebase/database';
+// import { handLandmarksRef } from '../firebase/realtime_db';
+// import { onValue } from 'firebase/database';
 import { useEffect, useRef, useState } from 'react';
 import HandGestureRecognitionMin from "./HandGestureRecognitionMin";
 

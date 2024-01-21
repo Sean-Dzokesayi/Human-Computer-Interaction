@@ -2,6 +2,7 @@ import React from "react";
 import styles from './FocusArea.module.css'
 import ActionMenu from "./ActionMenu";
 import TrainGestureRecogniser from "./TrainGestureRecogniser";
+import ModelLoader from "./ModelLoader";
 
 
 
@@ -22,7 +23,7 @@ export default function FocusArea({ handLandmarks, setHandLandmarks, isTraining,
         <div className={styles.container}>
           {/* {actionMenu} */}
           <TrainGestureRecogniser handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks} setIsTraining={setIsTraining} isTraining={isTraining}/>
-
+          {/* <ModelLoader handLandmarks={handLandmarks}/> */}
 
         </div>
     </>

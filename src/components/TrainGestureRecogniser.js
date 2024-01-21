@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from './TrainGestureRecogniser.module.css';
 import HandGestureRecognitionMax from "./HandGestureRecognitionMax";
-import trainClassificationModel from '../trainingUtil';
+import {trainClassificationModel} from '../trainingUtil';
 
 export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks,isTraining, setIsTraining  }) {
 
@@ -13,15 +13,15 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
 
   const [trainingData, setTrainingData] = useState([])
 
-  const downloadCSV = () => {
-    const csvContent = trainingData.map(row => row.join(',')).join('\n');
-    const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'example.csv'; // Specify the file name
-    a.click();
-    URL.revokeObjectURL(url);
+  const trainModel = () => {
+    // const csvContent = trainingData.map(row => row.join(',')).join('\n');
+    // const blob = new Blob([csvContent], { type: 'text/csv' });
+    // const url = URL.createObjectURL(blob);
+    // const a = document.createElement('a');
+    // a.href = url;
+    // a.download = 'example.csv'; // Specify the file name
+    // a.click();
+    // URL.revokeObjectURL(url);
     trainClassificationModel(trainingData)
   };
   
@@ -49,9 +49,9 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
         try{
           handLandmarks[0]['landmarks'].forEach(landmark => {
             // console.log(landmark) 
-            record.push(landmark[0])
-            record.push(landmark[1])
-            record.push(landmark[2])
+            record.push(parseInt(landmark[0]))
+            record.push(parseInt(landmark[1]))
+            record.push(parseInt(landmark[2]))
           });
           record.push(labels[labelTracker])
           // console.log("Record:", record)
@@ -93,7 +93,7 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
       }
 
       
-    }, 1000);
+    }, 200);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
@@ -111,11 +111,11 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
         <div className={styles.actionViewContainer}>
           <div className={styles.actionViewLeft}>
 
-            { labelTracker == 0 ?  <span className={styles.displayedIcon}>✋</span> : null}
-            {labelTracker == 1 ?  <span className={styles.displayedIcon}>✊</span> : null}
-            {labelTracker == 2 ?  <span className={styles.displayedIcon}>👍</span> : null}
-            {labelTracker == 3 ?  <span className={styles.displayedIcon}>👎</span> : null}
-            {labelTracker == 4 ?  <span className={styles.displayedIcon}>⭕️</span> : null}
+            { labelTracker === 0 ?  <span className={styles.displayedIcon}>✋</span> : null}
+            {labelTracker === 1 ?  <span className={styles.displayedIcon}>✊</span> : null}
+            {labelTracker === 2 ?  <span className={styles.displayedIcon}>👍</span> : null}
+            {labelTracker === 3 ?  <span className={styles.displayedIcon}>👎</span> : null}
+            {labelTracker === 4 ?  <span className={styles.displayedIcon}>⭕️</span> : null}
             
           </div>
           <div className={styles.actionViewRight}>
@@ -140,7 +140,7 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
           
         </ul>
         <div>
-      <button onClick={downloadCSV}>Download CSV</button>
+      <button onClick={trainModel}>Download CSV</button>
     </div>
       </div>
 
