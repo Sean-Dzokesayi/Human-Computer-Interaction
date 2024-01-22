@@ -5,11 +5,14 @@ import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
 import "./App.css";
 import { drawHand } from "../utilities";
+import { useModel } from './ModelContext'; // Import useModel
+
 
 
 function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = null, height = null }) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const { mpHandsModel } = useModel();
 
   if(width == null){
     width = 120;
@@ -19,27 +22,15 @@ function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = nu
 
   useEffect(() => {
     const runHandpose = async () => {
-      let net = null;
-      while (net === null) {
-        try {
-          console.log("Loading model...");
-          net = await handpose.load();
-          console.log("Handpose model loaded.");
-        } catch (error) {
-          console.error("Error loading Handpose model:", error);
-          // Wait for a while before trying again
-          await new Promise((resolve) => setTimeout(resolve, 2000));
+      setInterval(() => {        
+        if(mpHandsModel){
+          detect(mpHandsModel);
         }
-      }
-
-      // Once the model is loaded, start detecting hands
-      setInterval(() => {
-        detect(net);
       }, 100);
     };
 
     runHandpose();
-  }, []); // Empty dependency array ensures this runs only once on component mount
+  }, [mpHandsModel]);  // Empty dependency array ensures this runs only once on component mount
 
 
   const detect = async (net) => {

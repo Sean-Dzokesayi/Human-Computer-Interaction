@@ -18,10 +18,8 @@ export default function Sidebar({ handLandmarks, setHandLandmarks, isTraining}) 
               <li className={styles.microphone}></li>
               <li className={styles.landmarks}>
               
-              { isTraining == false ? 
-               <HandGestureRecognitionMin handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks}/>
-               : null
-            }
+              <HandGestureRecognitionMin handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks}/>
+          
              
               
               </li>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from './FocusArea.module.css'
 import ActionMenu from "./ActionMenu";
-import TrainGestureRecogniser from "./TrainGestureRecogniser";
-import GestureRecognizer from "./GestureRecognizer";
+import Predictor from './Predictor'
+import GenerateModelDataset from "./GenerateModelDataset";
+import ModelTrainer from "./ModelTrainer";
 
 
 
@@ -27,11 +28,13 @@ export default function FocusArea({ handLandmarks, setHandLandmarks, isTraining,
           {/* {actionMenu} */}
 
           {
-              view ? 
-              <TrainGestureRecogniser handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks} setIsTraining={setIsTraining} isTraining={isTraining}/>
-              : 
-              <GestureRecognizer handLandmarks={handLandmarks}/>
+              // view ? 
+              // // <GenerateModelDataset handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks} setIsTraining={setIsTraining} isTraining={isTraining}/>
+              // : 
+              <ModelTrainer handLandmarks={handLandmarks}/>
           }
+
+          <Predictor handLandmarks={handLandmarks}/>
     
           <button onClick={() => { setView(!view) }} style={{ marginTop: "2%" }}>Change View</button>
         </div>

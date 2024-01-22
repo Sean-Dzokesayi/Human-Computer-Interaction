@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from './TrainGestureRecogniser.module.css';
 import HandGestureRecognitionMax from "./HandGestureRecognitionMax";
-import {trainClassificationModel} from '../trainingUtil';
 
-export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks,isTraining, setIsTraining  }) {
+export default function GenerateModelDataset({ handLandmarks, setHandLandmarks,isTraining, setIsTraining  }) {
 
   const [counter, setCounter] = useState(0);
   const [labelTracker, setTracker] = useState(0);
@@ -19,7 +18,7 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
 
   const [trainingData, setTrainingData] = useState([])
 
-  const trainModel = () => {
+  const downloadData = () => {
     const csvContent = trainingData.map(row => row.join(',')).join('\n');
     const blob = new Blob([csvContent], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
@@ -28,7 +27,6 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
     a.download = 'gestureDataset.csv'; // Specify the file name
     a.click();
     URL.revokeObjectURL(url);
-    trainClassificationModel(trainingData)
   };
   
   const labels = [
@@ -40,9 +38,6 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
 ] 
 
   useEffect(() => {
-    // console.log("origional landmarks: ", handLandmarks)
-    setIsTraining(true)
-
     const intervalId = setInterval(() => {
       // Count 3 seconds on each run
       if (counter < 3) {
@@ -106,8 +101,6 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
   return (
     <>
       <div className={styles.container}>
-        
-
         
         <p className={styles.label}>{labels[labelTracker]}</p> 
         <p className={styles.counter}>{counter}</p>
@@ -174,7 +167,7 @@ export default function TrainGestureRecogniser({ handLandmarks, setHandLandmarks
           
         </ul>
         <div>
-      <button onClick={trainModel} >Train Model</button>
+      <button onClick={downloadData} >Download CSV</button>
     </div>
       </div>
 

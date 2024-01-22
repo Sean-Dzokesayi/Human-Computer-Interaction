@@ -1,15 +1,18 @@
 import React, { useRef, useEffect} from "react";
 // import logo from './logo.svg';
 import * as tf from "@tensorflow/tfjs";
-import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
 import "./App.css";
 import { drawHand } from "../utilities";
+import { useModel } from './ModelContext'; // Import useModel
+
 
 
 function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = null, height = null }) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const { mpHandsModel } = useModel();
+
 
   if(width == null){
     width = 140;
@@ -18,30 +21,19 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
 
   useEffect(() => {
     const runHandpose = async () => {
-      let net = null;
-      while (net === null) {
-        try {
-          console.log("Loading model...");
-          net = await handpose.load();
-          console.log("Handpose model loaded.");
-        } catch (error) {
-          console.error("Error loading Handpose model:", error);
-          // Wait for a while before trying again
-          await new Promise((resolve) => setTimeout(resolve, 2000));
+      setInterval(() => {        
+        if(mpHandsModel){
+          detect(mpHandsModel);
         }
-      }
-
-      // Once the model is loaded, start detecting hands
-      setInterval(() => {
-        detect(net);
       }, 100);
     };
 
     runHandpose();
-  }, []); // Empty dependency array ensures this runs only once on component mount
+  }, [mpHandsModel]); // Empty dependency array ensures this runs only once on component mount
 
 
   const detect = async (net) => {
+    
     // Check data is available
     if (
       typeof webcamRef.current !== "undefined" &&
@@ -86,11 +78,10 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
       <Webcam
           ref={webcamRef}
           style={{
-            position: "fixed",
+            position: "absolute",
             // marginLeft: "auto",
             // marginRight: "auto",
-            left: 0,
-            right: 0,
+            left: 1,
             textAlign: "center",
             zindex: 9,
             width: width,
@@ -102,16 +93,16 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
         <canvas
           ref={canvasRef}
           style={{
-            position: "fixed",
+            position: "absolute",
             // marginLeft: "auto",
             // marginRight: "auto",
-            left: 0,
-            right: 0,
+            left: 1,
             textAlign: "center",
             zindex: 9,
             width: width,
             height: height,
             // display: "none"
+            // border: "1px solid red"
           }}
         />
 
