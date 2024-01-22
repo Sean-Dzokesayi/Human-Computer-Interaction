@@ -41,7 +41,7 @@ export const normalizeTensor = (tensor) => {
 export const trainNewModel = async (featuresTensor, labelsTensor) => {
   const model = defineModel();
   await model.fit(featuresTensor, labelsTensor, {
-    epochs: 10,
+    epochs: 5,
     validationSplit: 0.2,
     callbacks: { onEpochEnd: (epoch, logs) => console.log(`Epoch ${epoch + 1}: Loss = ${logs.loss}, Accuracy = ${logs.acc}`) },
   });

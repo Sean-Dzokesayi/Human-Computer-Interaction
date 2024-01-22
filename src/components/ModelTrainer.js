@@ -1,7 +1,8 @@
 // ModelTrainer.js
 import React, { useState } from 'react';
 import { preprocessData, trainNewModel } from './trainingUtil'; // Assume these are moved to a utils file
-import { useModel } from './ModelContext';
+import { useModel } from './ModelProvider';
+
 
 function ModelTrainer({ setModel }) {
   const [isTraining, setIsTraining] = useState(false);
@@ -12,11 +13,21 @@ function ModelTrainer({ setModel }) {
     setIsTraining(true);
     setTrainingStatus('Reading and preprocessing data...');
     const file = event.target.files[0];
-
+  
     try {
       const { features, labels } = await preprocessData(file);
       const trainedModel = await trainNewModel(features, labels);
-      updateGestureModel(trainedModel); // Update the model in the parent component
+  
+      // Assuming updateGestureModel sets the model in some context or state
+      updateGestureModel(trainedModel); 
+  
+      // Save the model to IndexedDB
+      await trainedModel.save('indexeddb://my-gesture-model');
+  
+      // Optionally, save a reference in local storage
+      localStorage.setItem('gestureModelSaved', 'true');
+      console.log("model solved to local storage")
+  
       setTrainingStatus('Training complete!');
     } catch (error) {
       console.error('Training failed:', error);
@@ -25,6 +36,7 @@ function ModelTrainer({ setModel }) {
       setIsTraining(false);
     }
   };
+  
 
   return (
     <div>

@@ -5,23 +5,19 @@ import Sidebar from './Sidebar';
 import './MainPage.css';
 import HandGestureRecognitionMin from './HandGestureRecognitionMin';
 
-function MainPage({ data, handLandmarks, setHandLandmarks }) {
 
+function MainPage({  }) {
 
   const [isTraining, setIsTraining] = useState(false);
-  if(handLandmarks != null){
-    // console.log("Landmarks from mainpage : \n", handLandmarks)
-  }
 
   return (
     <div className="MainPage">
       <JazzInputText />
 
       
-      <FocusArea handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks} isTraining={isTraining} setIsTraining={setIsTraining}
-        />
+      <FocusArea />
 
-      <Sidebar handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks} isTraining={isTraining} setIsTraining={setIsTraining}/>
+      <Sidebar />
       {/* <Footer /> */}
     </div>
   );

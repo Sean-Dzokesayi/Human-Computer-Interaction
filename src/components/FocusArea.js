@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from './FocusArea.module.css'
 import ActionMenu from "./ActionMenu";
-import Predictor from './Predictor'
 import GenerateModelDataset from "./GenerateModelDataset";
 import ModelTrainer from "./ModelTrainer";
 
@@ -19,24 +18,21 @@ export default function FocusArea({ handLandmarks, setHandLandmarks, isTraining,
     // console.log("hand landmarks from FocusArea", handLandmarks)
     const [view, setView] = useState(false);
 
-
-  
-  
   return (
     <>
         <div className={styles.container}>
           {/* {actionMenu} */}
 
-          {
-              // view ? 
-              // // <GenerateModelDataset handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks} setIsTraining={setIsTraining} isTraining={isTraining}/>
-              // : 
-              <ModelTrainer handLandmarks={handLandmarks}/>
-          }
+          {/* {
+              view ? 
+              <GenerateModelDataset setIsTraining={setIsTraining} isTraining={isTraining}/>
+              : 
+              <ModelTrainer />
+          } */}
 
-          <Predictor handLandmarks={handLandmarks}/>
+          
     
-          <button onClick={() => { setView(!view) }} style={{ marginTop: "2%" }}>Change View</button>
+          {/* <button onClick={() => { setView(!view) }} style={{ marginTop: "2%" }}>Change View</button> */}
         </div>
     </>
     

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from './TrainGestureRecogniser.module.css';
 import HandGestureRecognitionMax from "./HandGestureRecognitionMax";
+import { useAppContext } from './AppProvider'; // Import useModel
 
-export default function GenerateModelDataset({ handLandmarks, setHandLandmarks,isTraining, setIsTraining  }) {
 
+export default function GenerateModelDataset({ setHandLandmarks,isTraining, setIsTraining  }) {
+
+  const { handLandmarks, updateHandLandmarks } = useAppContext();
   const [counter, setCounter] = useState(0);
   const [labelTracker, setTracker] = useState(0);
-
   const [completedCounter, setCompletedCounter] = useState(
     [
       0 , 0, 0, 0, 0, 0, 0, 0 ,0 ,0,
@@ -15,7 +17,6 @@ export default function GenerateModelDataset({ handLandmarks, setHandLandmarks,i
       0 , 0, 0, 0, 0, 0, 0, 0 ,0 ,0,
   ])
   const [completedCounterIndex, setCompletedCounterIndex] = useState(0)
-
   const [trainingData, setTrainingData] = useState([])
 
   const downloadData = () => {
@@ -116,7 +117,7 @@ export default function GenerateModelDataset({ handLandmarks, setHandLandmarks,i
             
           </div>
           <div className={styles.actionViewRight}>
-            <HandGestureRecognitionMax handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks} width={460} height={400}/>
+            <HandGestureRecognitionMax width={460} height={400}/>
           </div>
         </div>
         

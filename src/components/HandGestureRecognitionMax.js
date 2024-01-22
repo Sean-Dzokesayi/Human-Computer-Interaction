@@ -5,14 +5,14 @@ import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
 import "./App.css";
 import { drawHand } from "../utilities";
-import { useModel } from './ModelContext'; // Import useModel
+import { useModel } from './ModelProvider'; // Import useModel
+import { useAppContext } from './AppProvider'; // Import useModel
 
-
-
-function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = null, height = null }) {
+function HandGestureRecognitionMax({ width = null, height = null }) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const { mpHandsModel } = useModel();
+  const { handLandmarks, updateHandLandmarks  } = useAppContext();
 
   if(width == null){
     width = 120;
@@ -57,7 +57,7 @@ function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = nu
       const hand = await net.estimateHands(video);
       try{
         // console.log("Hands", hand)
-        setHandLandmarks(hand)
+        updateHandLandmarks(hand)
       }
       catch{
 

@@ -4,11 +4,14 @@ import styles from './Sidebar.module.css'
 // import { onValue } from 'firebase/database';
 import { useEffect, useRef, useState } from 'react';
 import HandGestureRecognitionMin from "./HandGestureRecognitionMin";
+import { useAppContext } from './AppProvider'; // Import useModel
+import Predictor from './Predictor'
 
-export default function Sidebar({ handLandmarks, setHandLandmarks, isTraining}) {
+
+export default function Sidebar({ isTraining}) {
 
 
-  // console.log("hand landmarks from sidebar", handLandmarks)
+  const { handLandmarks, updateHandLandmarks } = useAppContext();
 
   return (
     <>
@@ -18,12 +21,13 @@ export default function Sidebar({ handLandmarks, setHandLandmarks, isTraining}) 
               <li className={styles.microphone}></li>
               <li className={styles.landmarks}>
               
-              <HandGestureRecognitionMin handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks}/>
-          
-             
+              <HandGestureRecognitionMin />
+              <Predictor />
               
               </li>
             </ul>
+            
+            <p>gere</p>
 
         </div>
 

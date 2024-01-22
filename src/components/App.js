@@ -5,14 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { onValue } from 'firebase/database';
 import { useEffect, useState } from 'react';
 import * as handpose from "@tensorflow-models/handpose";
-import { ModelProvider } from './ModelContext';
-
+import { ModelProvider } from './ModelProvider';
+import { AppProvider } from './AppProvider';
 
 
 
 function App() {
   const [jazzState, setJazzState] = useState({});
   const [handLandmarks, setHandLandmarks] = useState(null)
+  // const { mpHandsModel } = useModel();
 
   // useEffect(() => {
   //   const fetchData = () => {
@@ -30,11 +31,14 @@ function App() {
 
 
   return (
-    <ModelProvider>
-      <div className="App">
-        <MainPage data={jazzState} handLandmarks={handLandmarks} setHandLandmarks={setHandLandmarks}/>
-      </div>
-    </ModelProvider>
+    <AppProvider>
+        <ModelProvider>
+          <div className="App">
+            <MainPage />
+          </div>
+        </ModelProvider>
+     </AppProvider>
+    
     
   );
 }

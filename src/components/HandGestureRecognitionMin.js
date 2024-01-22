@@ -4,14 +4,16 @@ import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
 import "./App.css";
 import { drawHand } from "../utilities";
-import { useModel } from './ModelContext'; // Import useModel
+import { useModel } from './ModelProvider'; // Import useModel
+import { useAppContext } from './AppProvider'; // Import useModel
 
 
-
-function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = null, height = null }) {
+function HandGestureRecognitionMin({ width = null, height = null }) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const { mpHandsModel } = useModel();
+  const { handLandmarks, updateHandLandmarks  } = useAppContext();
+
 
 
   if(width == null){
@@ -56,7 +58,7 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
       // Make Detections
       const hand = await net.estimateHands(video);
       try{
-        setHandLandmarks(hand)
+        updateHandLandmarks(hand)
         // console.log(hand)
       }
       catch{
