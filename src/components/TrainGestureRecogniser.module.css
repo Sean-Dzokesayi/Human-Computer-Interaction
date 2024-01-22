@@ -4,6 +4,7 @@
     width: 80vw;
     border: 1px solid gray;
 
+
 }
 
 .counter{
@@ -24,8 +25,8 @@
     /* border: 1px solid red; */
     display: flex;
     /* margin: 0; */
-    width: 20%;
-    margin-left: 37%;
+    width: 90%;
+    margin-left: 5%;
     margin-top: 1.5em;
 }
 .point{

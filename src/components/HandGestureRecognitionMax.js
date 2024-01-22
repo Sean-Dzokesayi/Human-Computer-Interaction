@@ -65,9 +65,11 @@ function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = nu
       // Make Detections
       const hand = await net.estimateHands(video);
       try{
+        // console.log("Hands", hand)
         setHandLandmarks(hand)
       }
       catch{
+
         // console.log("no landmarks")
       }
       
@@ -83,7 +85,6 @@ function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = nu
   };
 
   return (
-
     <>
     <Webcam
           ref={webcamRef}
@@ -91,7 +92,7 @@ function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = nu
             position: "absolute",
             // marginLeft: "auto",
             // marginRight: "auto",
-            left: "50%",
+            left: "55%",
             top: "21.5%",
             textAlign: "center",
             zindex: 9,
@@ -108,12 +109,12 @@ function HandGestureRecognitionMax({ handLandmarks, setHandLandmarks, width = nu
             position: "absolute",
             // marginLeft: "auto",
             // marginRight: "auto",
-            left: "50%",
-            top: "26.4%",
+            left: "55%",
+            top: "20%",
             textAlign: "center",
             zindex: 9,
             width: width,
-            height: 345,
+            height: height,
             // border:"2px solid black"
             // display: "none"
           }}

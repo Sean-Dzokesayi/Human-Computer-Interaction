@@ -16,7 +16,6 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
     height = 140;
   }
 
-
   useEffect(() => {
     const runHandpose = async () => {
       let net = null;
@@ -66,6 +65,7 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
       const hand = await net.estimateHands(video);
       try{
         setHandLandmarks(hand)
+        // console.log(hand)
       }
       catch{
         // console.log("no landmarks")
@@ -73,6 +73,10 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
       
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
+      // Set the background color
+      ctx.fillStyle = "#D9D9D9";
+      ctx.fillRect(0, 0, videoWidth, videoHeight);
+
       drawHand(hand, ctx, videoWidth, videoHeight);
     }
   };
@@ -82,7 +86,7 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
       <Webcam
           ref={webcamRef}
           style={{
-            position: "absolute",
+            position: "fixed",
             // marginLeft: "auto",
             // marginRight: "auto",
             left: 0,
@@ -98,7 +102,7 @@ function HandGestureRecognitionMin({ handLandmarks, setHandLandmarks, width = nu
         <canvas
           ref={canvasRef}
           style={{
-            position: "absolute",
+            position: "fixed",
             // marginLeft: "auto",
             // marginRight: "auto",
             left: 0,

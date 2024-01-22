@@ -7,7 +7,6 @@ export async function trainClassificationModel(data) {
   let features = data.map(entry => entry.slice(0, -1)); // All but the last element
   const labels = data.map(entry => entry[entry.length - 1]); // Last element
 
-  
   // Convert labels to one-hot encoding
   const uniqueLabels = [...new Set(labels)]; // Extract unique labels for encoding
   const labelMapping = uniqueLabels.reduce((acc, label, index) => {
@@ -50,22 +49,12 @@ export async function trainClassificationModel(data) {
   const evaluation = model.evaluate(tf.tensor2d(xTest), tf.tensor2d(yTest));
   const testAccuracy = await evaluation[1].data().then(data => data[0]);
   console.log(`Test accuracy: ${testAccuracy * 100}%`);
-  saveAndDownloadModel(model).then(()=> {
-    console.log("download initiated")
-  }
+  saveAndDownloadModel(model).then(() => {
+    console.log("download initiated");
+  });
 
-  )
   return model;
 }
-
-
-// async function saveAndDownloadModel(model) {
-//   // Save the model as a downloadable file in the browser
-//   // The model will be saved as two files: model.json and model.weights.bin
-//   console.log(model)
-//   await model.save('downloads://my-model');
-
-// }
 
 async function saveAndDownloadModel(model) {
   // Save the model as a JSON file
@@ -86,7 +75,8 @@ async function saveAndDownloadModel(model) {
   document.body.removeChild(aJSON);
 
   // Save the weights as binary data
-  const weightsBlob = await model.save('downloads://my-model/model.weights');
+  const weightsBlob = await model.save('downloads://my-model');
 }
 
-
+// Call trainClassificationModel with your data here
+// trainClassificationModel(yourData);
