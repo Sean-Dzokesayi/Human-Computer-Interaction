@@ -56,12 +56,14 @@ function HandGestureRecognitionMax({ width = null, height = null }) {
       // Make Detections
       const hand = await net.estimateHands(video);
       try{
-        // console.log("Hands", hand)
-        updateHandLandmarks(hand)
+        if(hand[0]['handInViewConfidence'] > 0.90){
+          updateHandLandmarks(hand)
+        }else{
+          updateHandLandmarks(null)
+        }
       }
       catch{
-
-        // console.log("no landmarks")
+        updateHandLandmarks(null)
       }
       
       // Draw mesh
@@ -105,6 +107,7 @@ function HandGestureRecognitionMax({ width = null, height = null }) {
             textAlign: "center",
             zindex: 9,
             width: width,
+            backgroundColor: "#D9D9D9",
             height: height,
             // border:"2px solid black"
             // display: "none"

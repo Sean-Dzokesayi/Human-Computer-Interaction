@@ -6,13 +6,14 @@ import "./App.css";
 import { drawHand } from "../utilities";
 import { useModel } from './ModelProvider'; // Import useModel
 import { useAppContext } from './AppProvider'; // Import useModel
+import { Button } from "bootstrap";
 
 
 function HandGestureRecognitionMin({ width = null, height = null }) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const { mpHandsModel } = useModel();
-  const { handLandmarks, updateHandLandmarks  } = useAppContext();
+  const { handLandmarks, updateHandLandmarks, updateMotionX, updateFocusAreaPage  } = useAppContext();
 
 
 
@@ -58,11 +59,26 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
       // Make Detections
       const hand = await net.estimateHands(video);
       try{
-        updateHandLandmarks(hand)
-        // console.log(hand)
+        
+        var motionX = 0
+
+        hand[0]['landmarks'].forEach(element => {
+          motionX += parseInt(element[0])
+        });
+
+
+        // console.log("Motion ", motionX)
+        updateMotionX(motionX)
+
+
+        if(hand[0]['handInViewConfidence'] > 0.90){
+          updateHandLandmarks(hand)
+        }else{
+          updateHandLandmarks(null)
+        }
       }
       catch{
-        // console.log("no landmarks")
+        updateHandLandmarks(null)
       }
       
       // Draw mesh
@@ -75,8 +91,29 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
     }
   };
 
+  const openSettings = () => {
+    console.log("Open settings")
+    updateFocusAreaPage("trainingPage")
+  }
+
+
   return (
     <div>
+
+      <button
+        onClick={openSettings}
+        color="#841584"
+        // accessibilityLabel=""
+        style={{
+          position: "fixed",
+          right: 1,
+          border: "0px",
+          zIndex: 10,
+          fontSize: 18
+        }}
+      >⚙</button>
+      
+
       <Webcam
           ref={webcamRef}
           style={{
@@ -103,6 +140,7 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
             zindex: 9,
             width: width,
             height: height,
+            backgroundColor: "#D9D9D9"
             // display: "none"
             // border: "1px solid red"
           }}

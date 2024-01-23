@@ -1,33 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './FocusArea.module.css'
 import ActionMenu from "./ActionMenu";
 import GenerateModelDataset from "./GenerateModelDataset";
 import ModelTrainer from "./ModelTrainer";
+import { useAppContext } from './AppProvider'; // Import useModel
 
 
+export default function FocusArea({  }) {
+    const { triggeredGesture, isMenuDisplayed, focusAreaPage  } = useAppContext();
+    const [view, setView] = useState(false)
+    const [nowDisplaying, setNowDisplaying] = useState(null)
 
-export default function FocusArea({ handLandmarks, setHandLandmarks, isTraining, setIsTraining }) {
-  // let actionMenu;
-  // if(data?.gesture == "POINTS_EQUAL" && data?.gesture_counter == 3){
-  //   actionMenu = <ActionMenu />
-  // }
-  // else{
-  //   actionMenu = null;
-  // }
-
-    // console.log("hand landmarks from FocusArea", handLandmarks)
-    const [view, setView] = useState(false);
-
+  useEffect(() => {
+    if(focusAreaPage === "trainingPage"){
+      setNowDisplaying(<GenerateModelDataset />);
+    }
+    else if(focusAreaPage === "home"){
+      setNowDisplaying(null);
+    }
+    else if(focusAreaPage === "loadDataset"){
+      setNowDisplaying(<ModelTrainer />);
+    }
+    
+  }, [focusAreaPage]); 
+  
   return (
     <>
         <div className={styles.container}>
-          {/* {actionMenu} */}
+          { (isMenuDisplayed) ? <ActionMenu /> : null }
 
+
+          {nowDisplaying}
           {/* {
               view ? 
-              <GenerateModelDataset setIsTraining={setIsTraining} isTraining={isTraining}/>
+              <GenerateModelDataset />
               : 
-              <ModelTrainer />
+              <ModelTrainer /> 
           } */}
 
           

@@ -11,7 +11,16 @@ import Predictor from './Predictor'
 export default function Sidebar({ isTraining}) {
 
 
-  const { handLandmarks, updateHandLandmarks } = useAppContext();
+  const { handLandmarks, updateHandLandmarks, updateFocusAreaPage } = useAppContext();
+
+  const goToHome = () => {
+    console.log("Go to home")
+    updateFocusAreaPage("home")
+  }
+
+  const goToLoadModel = () => {
+    updateFocusAreaPage("loadDataset")
+  }
 
   return (
     <>
@@ -23,12 +32,39 @@ export default function Sidebar({ isTraining}) {
               
               <HandGestureRecognitionMin />
               <Predictor />
+
+
+              <button
+                    onClick={goToHome}
+                    color="#841584"
+                    // accessibilityLabel=""
+                    style={{
+                      position: "fixed",
+                      right: 1,
+                      marginTop: "2%",
+                      border: "0px",
+                      zIndex: 10,
+                      fontSize: 18
+                    }}
+                  >🛖</button>
+
+              <button
+                    onClick={goToLoadModel}
+                    color="#841584"
+                    // accessibilityLabel=""
+                    style={{
+                      position: "fixed",
+                      right: 1,
+                      marginTop: "4%",
+                      border: "0px",
+                      zIndex: 10,
+                      fontSize: 18
+                    }}
+                  >📁</button>
               
               </li>
             </ul>
             
-            <p>gere</p>
-
         </div>
 
     </>

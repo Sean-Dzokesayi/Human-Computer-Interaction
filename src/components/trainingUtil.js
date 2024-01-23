@@ -21,7 +21,7 @@ export const preprocessData = async (file) => {
 
 // Parse CSV data and normalize
 export const parseAndNormalizeData = (data) => {
-  const labelsMapping = { "PALM": 0, "FIST": 1, "THUMBS_UP": 2, "THUMBS_DOWN": 3, "POINTS_EQUAL": 4 };
+  const labelsMapping = { "PALM": 0, "FIST": 1, "THUMBS_UP": 2, "THUMBS_DOWN": 3, "POINTS_EQUAL": 4 , "Click": 5};
   const labels = data.map(row => labelsMapping[row.Label]);
   const features = data.map(row => Object.values(row).slice(0, -1).map(Number));
   const featuresTensor = tf.tensor2d(features);
@@ -41,7 +41,7 @@ export const normalizeTensor = (tensor) => {
 export const trainNewModel = async (featuresTensor, labelsTensor) => {
   const model = defineModel();
   await model.fit(featuresTensor, labelsTensor, {
-    epochs: 5,
+    epochs: 20,
     validationSplit: 0.2,
     callbacks: { onEpochEnd: (epoch, logs) => console.log(`Epoch ${epoch + 1}: Loss = ${logs.loss}, Accuracy = ${logs.acc}`) },
   });
@@ -67,7 +67,8 @@ export const handlePredict = async (model, inputData) => {
   "FIST",
   "THUMBS_UP",
   "THUMBS_DOWN",
-  "POINTS_EQUAL"]
+  "POINTS_EQUAL",
+  "Click"]
   // console.log(`Predicted class index: ${predictionIndex} ${labels[predictionIndex]} `);
   return labels[predictionIndex]
   // Additional logic to handle prediction result
@@ -78,8 +79,23 @@ export async function makePrediction(model, inputData) {
   const preprocessedData = preprocessInputData(inputData); // Ensure inputData is in the correct format
   const prediction = model.predict(preprocessedData);
   const predictionArray = await prediction.array();
-  return predictionArray[0].indexOf(Math.max(...predictionArray[0]));
+  // console.log("Prediction output", predictionArray);
+
+  // Find the index of the maximum prediction score
+  const predictedIndex = predictionArray[0].indexOf(Math.max(...predictionArray[0]));
+  
+  // Get the prediction score (confidence level) for the predicted class
+  let predictedConfidence = predictionArray[0][predictedIndex];
+  predictedConfidence = (predictedConfidence * 100).toFixed(2)
+
+  // console.log(`Predicted class index: ${predictedIndex}, Confidence: ${predictedConfidence}%`);
+
+  if(predictedConfidence < 80){
+    return -1 
+  }
+  return predictedIndex;
 }
+
 
 // Preprocess input data for prediction
 export function preprocessInputData(inputData) {

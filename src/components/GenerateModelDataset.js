@@ -4,7 +4,7 @@ import HandGestureRecognitionMax from "./HandGestureRecognitionMax";
 import { useAppContext } from './AppProvider'; // Import useModel
 
 
-export default function GenerateModelDataset({ setHandLandmarks,isTraining, setIsTraining  }) {
+export default function GenerateModelDataset({  }) {
 
   const { handLandmarks, updateHandLandmarks } = useAppContext();
   const [counter, setCounter] = useState(0);
@@ -35,7 +35,8 @@ export default function GenerateModelDataset({ setHandLandmarks,isTraining, setI
     "FIST",
     "THUMBS_UP",
     "THUMBS_DOWN",
-    "POINTS_EQUAL"
+    "POINTS_EQUAL",
+    "Click"
 ] 
 
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function GenerateModelDataset({ setHandLandmarks,isTraining, setI
             record.push(parseInt(landmark[2]))
           });
           record.push(labels[labelTracker])
-          // console.log("Record:", record)
+          console.log("Record:", record)
 
           // add new record to our trainingData
           var temp = trainingData
@@ -103,7 +104,7 @@ export default function GenerateModelDataset({ setHandLandmarks,isTraining, setI
     <>
       <div className={styles.container}>
         
-        <p className={styles.label}>{labels[labelTracker]}</p> 
+        <p className={styles.label}>{labels[labelTracker]} ({trainingData.length})</p> 
         <p className={styles.counter}>{counter}</p>
 
         <div className={styles.actionViewContainer}>
@@ -113,7 +114,9 @@ export default function GenerateModelDataset({ setHandLandmarks,isTraining, setI
             {labelTracker === 1 ?  <span className={styles.displayedIcon}>✊</span> : null}
             {labelTracker === 2 ?  <span className={styles.displayedIcon}>👍</span> : null}
             {labelTracker === 3 ?  <span className={styles.displayedIcon}>👎</span> : null}
-            {labelTracker === 4 ?  <span className={styles.displayedIcon}>⭕️</span> : null}
+            {labelTracker === 4 ?  <span className={styles.displayedIcon}>⭕️</span> : null} 
+            {labelTracker === 5 ?  <span className={styles.displayedIcon}>👌</span> : null}
+
             
           </div>
           <div className={styles.actionViewRight}>
