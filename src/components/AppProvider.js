@@ -59,7 +59,7 @@ export const AppProvider = ({ children }) => {
 
   
   return (
-    <AppContext.Provider value={{ handLandmarks, updateHandLandmarks, updateTriggeredGesture, triggeredGesture, isMenuDisplayed, updateMotionX, handMotionX, updateFocusAreaPage, focusAreaPage }}>
+    <AppContext.Provider value={{ handLandmarks, updateHandLandmarks, updateTriggeredGesture, triggeredGesture, isMenuDisplayed, updateMotionX, handMotionX, updateFocusAreaPage, focusAreaPage, setTriggeredGesture }}>
       {children}
     </AppContext.Provider>
   );

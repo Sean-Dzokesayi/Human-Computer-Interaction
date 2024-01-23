@@ -22,6 +22,7 @@ export const preprocessData = async (file) => {
 // Parse CSV data and normalize
 export const parseAndNormalizeData = (data) => {
   const labelsMapping = { "PALM": 0, "FIST": 1, "THUMBS_UP": 2, "THUMBS_DOWN": 3, "POINTS_EQUAL": 4 , "Click": 5};
+  // const labelsMapping = { "PALM": 0, "Click": 1};
   const labels = data.map(row => labelsMapping[row.Label]);
   const features = data.map(row => Object.values(row).slice(0, -1).map(Number));
   const featuresTensor = tf.tensor2d(features);
@@ -41,7 +42,7 @@ export const normalizeTensor = (tensor) => {
 export const trainNewModel = async (featuresTensor, labelsTensor) => {
   const model = defineModel();
   await model.fit(featuresTensor, labelsTensor, {
-    epochs: 20,
+    epochs: 10,
     validationSplit: 0.2,
     callbacks: { onEpochEnd: (epoch, logs) => console.log(`Epoch ${epoch + 1}: Loss = ${logs.loss}, Accuracy = ${logs.acc}`) },
   });
@@ -53,7 +54,7 @@ export const defineModel = () => {
   const model = tf.sequential();
   model.add(tf.layers.dense({ inputShape: [63], units: 64, activation: 'relu' }));
   model.add(tf.layers.dense({ units: 32, activation: 'relu' }));
-  model.add(tf.layers.dense({ units: 5, activation: 'softmax' }));
+  model.add(tf.layers.dense({ units: 6, activation: 'softmax' }));
   model.compile({ optimizer: 'adam', loss: 'sparseCategoricalCrossentropy', metrics: ['accuracy'] });
   return model;
 };
@@ -90,9 +91,9 @@ export async function makePrediction(model, inputData) {
 
   // console.log(`Predicted class index: ${predictedIndex}, Confidence: ${predictedConfidence}%`);
 
-  if(predictedConfidence < 80){
-    return -1 
-  }
+  // if(predictedConfidence < 80){
+  //   return -1 
+  // }
   return predictedIndex;
 }
 

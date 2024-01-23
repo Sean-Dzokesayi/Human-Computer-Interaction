@@ -3,12 +3,14 @@ import styles from './ActionMenu.module.css'
 import { useAppContext } from './AppProvider'; // Import useModel
 
 export default function ActionMenu() {
-  const { handMotionX } = useAppContext();
+  const { handMotionX, triggeredGesture, setTriggeredGesture } = useAppContext();
   const numMenuItems = 5;
   const [currentMenuItem, setCurrentMenuItem] = useState(parseInt(numMenuItems / 2));
   const [lastHandPos, setLastHandPos] = useState(null);
   const [isChangingItem, setIsChangingItem] = useState(false);
   const restingThreshold = 200; // Define the resting threshold
+
+  const [clickedItem, setClickedItem] = useState(0)
 
   const getBgColor = (id) => {
     if (id === currentMenuItem) {
@@ -38,6 +40,8 @@ export default function ActionMenu() {
     }
   }
 
+
+
   useEffect(() => {
     const moveCursor = async () => {
       if (lastHandPos === null) {
@@ -57,14 +61,20 @@ export default function ActionMenu() {
       setLastHandPos(handMotionX); // Update the last hand position
     };
 
+    if(triggeredGesture === "Click"){
+      console.log("Clicking")
+      setTriggeredGesture("")
+      console.log("menu item", currentMenuItem)
+      setClickedItem("Option " + (currentMenuItem + 1))
+    }
     moveCursor();
-  }, [handMotionX, lastHandPos, restingThreshold]);
+  }, [handMotionX, lastHandPos, restingThreshold, triggeredGesture]);
 
   return (
     <>
       <div className={styles.actionContainer}>
         <h1 className={styles.heading}>Action Menu</h1>
-        <p>{handMotionX !== null && lastHandPos !== null ? handMotionX - lastHandPos : ""}</p>
+        <p>{clickedItem}</p>
         <hr className={styles.lineHr} />
         <ul className={styles.actionList} >
           {[0, 1, 2, 3, 4].map((id) => (

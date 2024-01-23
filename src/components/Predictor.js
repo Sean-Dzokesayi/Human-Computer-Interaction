@@ -47,6 +47,7 @@ function Predictor() {
     if (prediction && prediction === lastPredictionRef.current) {
       intervalId = setTimeout(() => {
         if (currentDuration === actionStop) {
+          console.log("action stopping")
           updateTriggeredGesture(prediction);
           setPrediction('');
           setPredictionDuration(1); // Reset duration
