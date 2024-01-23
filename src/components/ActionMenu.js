@@ -41,7 +41,6 @@ export default function ActionMenu() {
   }
 
 
-
   useEffect(() => {
     const moveCursor = async () => {
       if (lastHandPos === null) {
