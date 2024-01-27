@@ -6,7 +6,7 @@ import { useAppContext } from './AppProvider'; // Import useModel
 
 export default function GenerateModelDataset({  }) {
 
-  const { handLandmarks, updateHandLandmarks } = useAppContext();
+  const { handLandmarks, updateHandLandmarks, updateIsTraining,isTraining } = useAppContext();
   const [counter, setCounter] = useState(0);
   const [labelTracker, setTracker] = useState(0);
   const [completedCounter, setCompletedCounter] = useState(
@@ -38,6 +38,10 @@ export default function GenerateModelDataset({  }) {
     "POINTS_EQUAL",
     "Click"
 ] 
+
+  // useEffect(() => {
+  //   updateIsTraining(true)
+  // }, [])
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -109,16 +113,14 @@ export default function GenerateModelDataset({  }) {
 
         <div className={styles.actionViewContainer}>
           <div className={styles.actionViewLeft}>
-{/* 
+
             { labelTracker === 0 ?  <span className={styles.displayedIcon}>✋</span> : null}
             {labelTracker === 1 ?  <span className={styles.displayedIcon}>✊</span> : null}
             {labelTracker === 2 ?  <span className={styles.displayedIcon}>👍</span> : null}
             {labelTracker === 3 ?  <span className={styles.displayedIcon}>👎</span> : null}
             {labelTracker === 4 ?  <span className={styles.displayedIcon}>⭕️</span> : null} 
-            {labelTracker === 5 ?  <span className={styles.displayedIcon}>👌</span> : null} */}
+            {labelTracker === 5 ?  <span className={styles.displayedIcon}>👌</span> : null}
 
-            { labelTracker === 0 ?  <span className={styles.displayedIcon}>✋</span> : null}
-            {labelTracker === 1 ?  <span className={styles.displayedIcon}>👌</span> : null}
           </div>
           <div className={styles.actionViewRight}>
             <HandGestureRecognitionMax width={460} height={400}/>

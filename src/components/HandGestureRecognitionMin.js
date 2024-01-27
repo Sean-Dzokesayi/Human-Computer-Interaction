@@ -59,7 +59,7 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
       // Make Detections
       const hand = await net.estimateHands(video);
       try{
-        
+        // console.log("hand", hand)
         var motionX = 0
 
         hand[0]['landmarks'].forEach(element => {

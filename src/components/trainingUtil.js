@@ -39,13 +39,38 @@ export const normalizeTensor = (tensor) => {
 };
 
 // Define and train a new model
-export const trainNewModel = async (featuresTensor, labelsTensor) => {
+// export const trainNewModel = async (featuresTensor, labelsTensor) => {
+//   const model = defineModel();
+//   await model.fit(featuresTensor, labelsTensor, {
+//     epochs: 20,
+//     validationSplit: 0.2,
+//     callbacks: { onEpochEnd: (epoch, logs) => console.log(`Epoch ${epoch + 1}: Loss = ${logs.loss}, Accuracy = ${logs.acc}`) },
+//   });
+//   return model;
+// };
+
+
+// Define and train a new model
+export const trainNewModel = async (featuresTensor, labelsTensor, targetAccuracy = 0.98) => {
   const model = defineModel();
+  let currentEpoch = 0;
+
   await model.fit(featuresTensor, labelsTensor, {
-    epochs: 10,
+    epochs: 100, // You can set a large number of epochs since training will stop early when target accuracy is reached
     validationSplit: 0.2,
-    callbacks: { onEpochEnd: (epoch, logs) => console.log(`Epoch ${epoch + 1}: Loss = ${logs.loss}, Accuracy = ${logs.acc}`) },
+    callbacks: {
+      onEpochEnd: async (epoch, logs) => {
+        currentEpoch = epoch + 1;
+        console.log(`Epoch ${currentEpoch}: Loss = ${logs.loss.toFixed(4)}, Accuracy = ${logs.acc.toFixed(4)}`);
+
+        if (logs.acc >= targetAccuracy) {
+          console.log(`Target accuracy of ${targetAccuracy * 100}% reached. Stopping training.`);
+          model.stopTraining = true; // Stop training when target accuracy is reached
+        }
+      },
+    },
   });
+
   return model;
 };
 

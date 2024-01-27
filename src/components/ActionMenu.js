@@ -3,12 +3,15 @@ import styles from './ActionMenu.module.css'
 import { useAppContext } from './AppProvider'; // Import useModel
 
 export default function ActionMenu() {
-  const { handMotionX, triggeredGesture, setTriggeredGesture } = useAppContext();
-  const numMenuItems = 5;
+  const { handMotionX, triggeredGesture, setTriggeredGesture, focusAreaPage, updateFocusAreaPage, updateIsMenuDisplayed } = useAppContext();
+  
+  const menuItems = ["home", "trainingPage", "home", "loadDataset", "home"]
+  const numMenuItems = menuItems.length;
+
   const [currentMenuItem, setCurrentMenuItem] = useState(parseInt(numMenuItems / 2));
   const [lastHandPos, setLastHandPos] = useState(null);
   const [isChangingItem, setIsChangingItem] = useState(false);
-  const restingThreshold = 200; // Define the resting threshold
+  const restingThreshold = 150; // Define the resting threshold
 
   const [clickedItem, setClickedItem] = useState(0)
 
@@ -65,6 +68,13 @@ export default function ActionMenu() {
       setTriggeredGesture("")
       console.log("menu item", currentMenuItem)
       setClickedItem("Option " + (currentMenuItem + 1))
+
+      // perform click navigation
+
+      console.log("clicked on", menuItems[currentMenuItem])
+      updateFocusAreaPage(menuItems[currentMenuItem])
+      updateIsMenuDisplayed(false)
+
     }
     moveCursor();
   }, [handMotionX, lastHandPos, restingThreshold, triggeredGesture]);
@@ -76,15 +86,32 @@ export default function ActionMenu() {
         <p>{clickedItem}</p>
         <hr className={styles.lineHr} />
         <ul className={styles.actionList} >
-          {[0, 1, 2, 3, 4].map((id) => (
-            <li
-              key={id}
+        <li
               className={styles.actionListItem}
-              style={{ backgroundColor: getBgColor(id) }}
-            >
-              <span></span>
-            </li>
-          ))}
+              style={{ backgroundColor: getBgColor(0) }}>
+              <span>A</span>
+        </li>
+        <li
+              className={styles.actionListItem}
+              style={{ backgroundColor: getBgColor(1) }}>
+              <span>⚙</span>
+        </li>
+        <li
+              className={styles.actionListItem}
+              style={{ backgroundColor: getBgColor(2) }}>
+              <span>🛖</span>
+        </li>
+        <li
+              className={styles.actionListItem}
+              style={{ backgroundColor: getBgColor(3) }}>
+              <span>📁</span>
+        </li>
+        <li
+              className={styles.actionListItem}
+              style={{ backgroundColor: getBgColor(4) }}>
+              <span>E</span>
+        </li>
+
         </ul>
       </div>
     </>

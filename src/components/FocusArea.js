@@ -4,10 +4,14 @@ import ActionMenu from "./ActionMenu";
 import GenerateModelDataset from "./GenerateModelDataset";
 import ModelTrainer from "./ModelTrainer";
 import { useAppContext } from './AppProvider'; // Import useModel
+import GotoLink from "./intentViews/GotoLink";
+import OpenApp from "./intentViews/OpenApp";
+import CloseApp from "./intentViews/CloseApp";
+import JazzOut from "./intentViews/JazzOutput";
 
 
 export default function FocusArea({  }) {
-    const { triggeredGesture, isMenuDisplayed, focusAreaPage  } = useAppContext();
+    const { triggeredGesture, isMenuDisplayed, focusAreaPage, updateIsTraining, isTraining  } = useAppContext();
     const [view, setView] = useState(false)
     const [nowDisplaying, setNowDisplaying] = useState(null)
 
@@ -21,13 +25,35 @@ export default function FocusArea({  }) {
     else if(focusAreaPage === "loadDataset"){
       setNowDisplaying(<ModelTrainer />);
     }
+    else if(focusAreaPage === "GotoLink"){
+      setNowDisplaying(<GotoLink />)
+    }
+    else if(focusAreaPage === "openApp"){
+      setNowDisplaying(<OpenApp />)
+    }
+    else if(focusAreaPage === "closeApp"){
+      setNowDisplaying(<CloseApp />)
+    }
+    else if(focusAreaPage === "jazzOutput"){
+      setNowDisplaying(<JazzOut />)
+    }
+
+    // Check if we are on the training page
+    if(focusAreaPage === "trainingPage"){
+      updateIsTraining(true)
+    }
+    else{
+      updateIsTraining(false)
+    }
+
+
     
   }, [focusAreaPage]); 
   
   return (
     <>
         <div className={styles.container}>
-          { (isMenuDisplayed) ? <ActionMenu /> : null }
+          { (isMenuDisplayed && !isTraining) ? <ActionMenu /> : null }
 
 
           {nowDisplaying}
