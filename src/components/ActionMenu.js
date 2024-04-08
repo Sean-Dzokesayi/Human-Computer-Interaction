@@ -5,7 +5,7 @@ import { useAppContext } from './AppProvider'; // Import useModel
 export default function ActionMenu() {
   const { handMotionX, triggeredGesture, setTriggeredGesture, focusAreaPage, updateFocusAreaPage, updateIsMenuDisplayed } = useAppContext();
   
-  const menuItems = ["home", "trainingPage", "home", "loadDataset", "home"]
+  const menuItems = ["trainingPage", "home", "loadDataset", "mic", "micStop"]
   const numMenuItems = menuItems.length;
 
   const [currentMenuItem, setCurrentMenuItem] = useState(parseInt(numMenuItems / 2));
@@ -72,6 +72,7 @@ export default function ActionMenu() {
       // perform click navigation
 
       console.log("clicked on", menuItems[currentMenuItem])
+      updateFocusAreaPage("null")
       updateFocusAreaPage(menuItems[currentMenuItem])
       updateIsMenuDisplayed(false)
 
@@ -86,30 +87,31 @@ export default function ActionMenu() {
         <p>{clickedItem}</p>
         <hr className={styles.lineHr} />
         <ul className={styles.actionList} >
+        
         <li
               className={styles.actionListItem}
               style={{ backgroundColor: getBgColor(0) }}>
-              <span>A</span>
-        </li>
-        <li
-              className={styles.actionListItem}
-              style={{ backgroundColor: getBgColor(1) }}>
               <span>⚙</span>
         </li>
         <li
               className={styles.actionListItem}
-              style={{ backgroundColor: getBgColor(2) }}>
+              style={{ backgroundColor: getBgColor(1) }}>
               <span>🛖</span>
         </li>
         <li
               className={styles.actionListItem}
-              style={{ backgroundColor: getBgColor(3) }}>
+              style={{ backgroundColor: getBgColor(2) }}>
               <span>📁</span>
         </li>
         <li
               className={styles.actionListItem}
+              style={{ backgroundColor: getBgColor(3) }}>
+              <span>🎤</span>
+        </li>
+        <li
+              className={styles.actionListItem}
               style={{ backgroundColor: getBgColor(4) }}>
-              <span>E</span>
+              <span>🎤🔇</span>
         </li>
 
         </ul>

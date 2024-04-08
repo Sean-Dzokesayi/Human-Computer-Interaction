@@ -13,7 +13,7 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const { mpHandsModel } = useModel();
-  const { handLandmarks, updateHandLandmarks, updateMotionX, updateFocusAreaPage  } = useAppContext();
+  const { handLandmarks, updateHandLandmarks, updateMotionX, updateMotionY, updateFocusAreaPage  } = useAppContext();
 
 
 
@@ -36,7 +36,6 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
 
 
   const detect = async (net) => {
-    
     // Check data is available
     if (
       typeof webcamRef.current !== "undefined" &&
@@ -47,30 +46,29 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
-
       // Set video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
-
       // Set canvas height and width
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
-
       // Make Detections
       const hand = await net.estimateHands(video);
       try{
         // console.log("hand", hand)
         var motionX = 0
-
+        var motionY = 0
+        // var count = 0
         hand[0]['landmarks'].forEach(element => {
           motionX += parseInt(element[0])
+          motionY += parseInt(element[1])
+          // count += 1
         });
-
-
+        // console.log("Num landmarks ", count)
         // console.log("Motion ", motionX)
         updateMotionX(motionX)
-
-
+        updateMotionY(motionY)
+        
         if(hand[0]['handInViewConfidence'] > 0.90){
           updateHandLandmarks(hand)
         }else{
@@ -80,13 +78,11 @@ function HandGestureRecognitionMin({ width = null, height = null }) {
       catch{
         updateHandLandmarks(null)
       }
-      
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
       // Set the background color
       ctx.fillStyle = "#D9D9D9";
       ctx.fillRect(0, 0, videoWidth, videoHeight);
-
       drawHand(hand, ctx, videoWidth, videoHeight);
     }
   };

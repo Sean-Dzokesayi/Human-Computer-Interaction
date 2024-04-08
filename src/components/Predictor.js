@@ -8,7 +8,7 @@ function Predictor() {
   const [predictionDuration, setPredictionDuration] = useState(1);
   const lastPredictionRef = useRef('');
   const { gestureRecognitionModel } = useModel();
-  const { handLandmarks, updateTriggeredGesture } = useAppContext();
+  const { handLandmarks, updateTriggeredGesture, updateRecognisedGesture } = useAppContext();
   const actionStop = 3; // Threshold for action
 
   const processPrediction = async (landmarks) => {
@@ -46,6 +46,9 @@ function Predictor() {
     let currentDuration = predictionDuration; // Store the current duration
     if (prediction && prediction === lastPredictionRef.current) {
       intervalId = setTimeout(() => {
+        updateRecognisedGesture(null)
+        updateRecognisedGesture(prediction)
+
         if (currentDuration === actionStop) {
           console.log("action stopping")
           updateTriggeredGesture(prediction);
