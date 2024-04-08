@@ -3,21 +3,29 @@ from transformers import WhisperProcessor, WhisperForConditionalGeneration
 import librosa
 from openai import OpenAI
 import soundfile as sf
-import tensorflow as tf
-from sklearn.preprocessing import LabelEncoder
-import pygame
+# import tensorflow as tf
+# from sklearn.preprocessing import LabelEncoder
+# import pygame
+import os
+from fileSystem import create_filesystem_list
+
+
+# from llama_index.core.readers.base import BaseReader
+# from llama_index.core.schema import Document
+# from llama_index import StorageContext, VectorStoreIndex, load_index_from_storage
+from llama_index.readers import PyMuPDFReader
 
 
 
 def load_model(model_path):
     try:
-        model = tf.keras.models.load_model(model_path)
+        # model = tf.keras.models.load_model(model_path)
         return model
     except FileNotFoundError:
         return None
 
-pygame.init()
-pygame.mixer.init()
+# pygame.init()
+# pygame.mixer.init()
 
 # Models
 #intent
@@ -27,12 +35,12 @@ pygame.mixer.init()
 # qa_pipeline = pipeline('question-answering', model="deepset/roberta-base-squad2", tokenizer="deepset/roberta-base-squad2")
 
 # transcription
-# processor = WhisperProcessor.from_pretrained("openai/whisper-base")
-# whisper_model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base")
-# whisper_model.config.forced_decoder_ids = None
+processor = WhisperProcessor.from_pretrained("openai/whisper-base")
+whisper_model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base")
+whisper_model.config.forced_decoder_ids = None
 
 # summarizer
-summarizer = pipeline("summarization")
+# summarizer = pipeline("summarization")
 
 # hand gestue
 # gesture_model = load_model('/Users/seandzokesayi/Desktop/PROJECT/model_server/hand_gesture_model.h5')
@@ -90,11 +98,38 @@ def question_answering(question, context):
     res = qa_pipeline(QA_input)
     return res['answer']
 
-def summary(text, max_length=50, min_length=9):
-    try:
-        return "[SUMMARY]" + summarizer(text, max_length=max_length, min_length=min_length, do_sample=False)[0]['summary_text']
-    except:
-        return text
+# def summary(text, max_length=50, min_length=9):
+#     try:
+#         # return "[SUMMARY]" + summarizer(text, max_length=max_length, min_length=min_length, do_sample=False)[0]['summary_text']
+#     except:
+#         return text
+
+def transcribe_webm_file():
+
+    # transcribes the file from the downloads folder
+    os.system(f"ffmpeg -i /Users/seandzokesayi/Downloads/audio.webm -vn -ab 128k -ar 44100 -y /Users/seandzokesayi/Downloads/audio.mp3")
+    # Read the mp3 file and resample to 16,000 Hz
+    audio_input, sampling_rate = sf.read("/Users/seandzokesayi/Downloads/audio.mp3")
+    if sampling_rate != 16000:
+        audio_input = librosa.resample(audio_input, orig_sr=sampling_rate, target_sr=16000)
+        sampling_rate = 16000
+
+    # Convert audio to input features
+    input_features = processor(audio_input, sampling_rate=sampling_rate, return_tensors="pt").input_features
+
+    # Generate token IDs
+    predicted_ids = whisper_model.generate(input_features)
+    
+    # Decode token IDs to text
+    transcription = processor.batch_decode(predicted_ids, skip_special_tokens=True)
+
+    os.system("rm /Users/seandzokesayi/Downloads/audio.mp3")
+    os.system("rm /Users/seandzokesayi/Downloads/audio.webm")
+    os.system('clear')
+    print("Here is our transcript: \n", transcription[0])
+
+    return transcription[0]
+
 
 def transcribe_mp3_file(mp3_path):
     # Read the mp3 file and resample to 16,000 Hz
@@ -116,7 +151,7 @@ def transcribe_mp3_file(mp3_path):
 
 def jazz(text):
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-0125",
         # response_format={ "type": "json_object" },
         seed=19,
         messages=[
@@ -155,8 +190,8 @@ def speak(text):
 
 def play_audio(speech_file_path):
     try:
-      pygame.mixer.music.load("./saved_responses/" + speech_file_path)
-      pygame.mixer.music.play()
+      # pygame.mixer.music.load("./saved_responses/" + speech_file_path)
+      # pygame.mixer.music.play()
       return True
     except:
         return False
@@ -171,4 +206,3 @@ def createSpeechFile(filename, text):
     )
     response.stream_to_file(speech_file_path)
     play_audio(speech_file_path)
-

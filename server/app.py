@@ -1,7 +1,9 @@
 import json 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import os
 from pynput.keyboard import Key,Controller
+from pynput.mouse import Button, Controller
+
 import webbrowser
 # import mediapipe as mp
 import time
@@ -9,12 +11,17 @@ import numpy as np
 import docx
 import models as jazzModels
 import pyperclip
+from flask_cors import CORS
+
 
 
 app = Flask(__name__)
+CORS(app, origins='http://localhost:3000')  # Enable CORS for all routes
 
 
 keyboard = Controller()
+mouse = Controller()
+
 
 @app.route("/open_app")
 def open_app():
@@ -60,6 +67,52 @@ def vol_down():
     keyboard.press(Key.media_volume_down)
     keyboard.release(Key.media_volume_down)
     return "volume decreased"
+
+
+@app.route("/scroll_up")
+def scroll_up():
+    # Scroll two steps up
+    mouse.scroll(0, -2)
+    return "scroll up"
+
+@app.route("/scroll_down")
+def scroll_down():
+    # Scroll two steps down
+    mouse.scroll(0, 2)
+    return "scroll down"
+
+
+@app.route("/move_mouse", methods=['POST'])
+def move_mouse():
+    SCREEN_WIDTH = 2560
+    SCREEN_HEIGHT = 1600
+    MOUSE_SENSITIVITY = 2  # Adjust sensitivity as needed
+    data = request.get_json()
+    x_sum = data.get('x')
+    y_sum = data.get('y')
+    
+    x_avg = x_sum / 21
+    y_avg = y_sum / 21
+
+    # Scale the average motion to fit within the screen dimensions
+    x_movement = x_avg * MOUSE_SENSITIVITY
+    y_movement = y_avg * MOUSE_SENSITIVITY
+
+    # # Calculate new mouse position
+    current_x, current_y = mouse.position
+    # new_x = max(0, min(SCREEN_WIDTH - 1, current_x + x_movement))
+    # new_y = max(0, min(SCREEN_HEIGHT - 1, current_y + y_movement))
+    new_x =  x_movement
+    new_y =  y_movement
+
+    # Move the mouse
+    mouse.position = (new_x, new_y)
+    print("Current pos", mouse.position)
+
+    print(f"x: {x_avg} y: {y_avg}")
+    return {"message": "Mouse moved successfully"}
+
+
 
 
 def other(output_json):
@@ -207,7 +260,7 @@ def add_to_file(filename, changesRequested):
     update_file_state["old_content"] = old_contents
     update_file_state["new_content"] = new_file_contents
     return [old_contents, new_file_contents]
-
+ 
 def update_file(filename, changesRequested):
     global update_file_state
     global jazz_state
@@ -240,6 +293,23 @@ def update_file(filename, changesRequested):
     return [old_contents, new_file_contents]
 
 
+# @app.route('/transcribe_audio', methods=['POST', 'OPTIONS'])
+# def transcribe_audio():
+#     transcript = jazzModels.transcribe_webm_file()  
+#     print("\nThis is the transcript from FLASK:\n", transcript)
+#     resp = jsonify({"transcript": transcript})
+#     return resp
+
+
+@app.route("/transcribe_audio")
+def transcribe_audio():
+    transcript = jazzModels.transcribe_webm_file()  
+    print("\nThis is the transcript from FLASK:\n", transcript)
+    resp = jsonify({"transcript": transcript})
+    resp.headers.add('Access-Control-Allow-Origin', '*')
+    print("resp:: " ,resp)
+    return resp
+     
 
 @app.route("/confirm_file_update")
 def write_to_file():
@@ -295,4 +365,4 @@ def processUserAudio():
 
 if __name__ == "__main__":
     # util.set_interval(updateMessagesOnChange, 1)
-    app.run(debug=False, host="0.0.0.0", port=5001)
+    app.run(debug=True, host="0.0.0.0", port=5001)
