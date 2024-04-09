@@ -1,0 +1,873 @@
+[
+    {
+      "text": "Please transcribe the following paragraph: 'The quick brown fox jumps over the lazy dog.'",
+      "class": "Type Text",
+      "target": "The quick brown fox jumps over the lazy dog."
+    },
+    {
+      "text": "Could you jot down these directions for me? 'From the station, turn right and walk straight for two blocks.'",
+      "class": "Type Text",
+      "target": "From the station, turn right and walk straight for two blocks."
+    },
+    {
+      "text": "Can you write out the lyrics to 'Bohemian Rhapsody' by Queen?",
+      "class": "Type Text",
+      "target": "Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality."
+    },
+    {
+      "text": "I need you to transcribe this interview: 'Reporter: What inspired you to write this novel?' 'Author: My travels and experiences in Africa.'",
+      "class": "Type Text",
+      "target": "Reporter: What inspired you to write this novel? Author: My travels and experiences in Africa."
+    },
+    {
+      "text": "Write down the recipe for spaghetti carbonara, please.",
+      "class": "Type Text",
+      "target": "Spaghetti Carbonara Recipe: Ingredients: spaghetti, eggs, bacon, Parmesan cheese, black pepper. Instructions: Boil spaghetti until al dente. Fry bacon until crispy. Whisk eggs and Parmesan cheese in a bowl. Drain spaghetti and mix with egg mixture. Add bacon and black pepper. Serve hot."
+    },
+    {
+      "text": "Can you transcribe this voicemail message? 'Hi, it's Sarah. Just calling to remind you about our meeting tomorrow at 10 a.m. Don't forget to bring the presentation slides.'",
+      "class": "Type Text",
+      "target": "Hi, it's Sarah. Just calling to remind you about our meeting tomorrow at 10 a.m. Don't forget to bring the presentation slides."
+    },
+    {
+      "text": "Please write down the main points from the lecture on quantum physics.",
+      "class": "Type Text",
+      "target": "Main points from the lecture on quantum physics: 1. Wave-particle duality. 2. Heisenberg uncertainty principle. 3. Quantum entanglement. 4. Schrödinger's cat experiment."
+    },
+    {
+      "text": "Could you jot down the ingredients for a classic margarita cocktail?",
+      "class": "Type Text",
+      "target": "Classic Margarita Cocktail Ingredients: tequila, lime juice, triple sec, salt. Instructions: Rim glass with salt. Mix tequila, lime juice, and triple sec. Pour over ice. Garnish with lime wedge."
+    },
+    {
+      "text": "Write out the dialogue from the movie scene where the hero confronts the villain.",
+      "class": "Type Text",
+      "target": "Hero: You can't get away with this! Villain: Oh, but I already have. Hero: Not for long. Villain: We'll see about that."
+    },
+    {
+      "text": "I need you to transcribe this audio recording of a business meeting.",
+      "class": "Type Text",
+      "target": "Business Meeting Transcript: Speaker 1: We need to increase our marketing efforts. Speaker 2: Agreed, we should focus on social media campaigns. Speaker 3: What about influencer partnerships?"
+    },
+    {
+        "text": "Please transcribe the lyrics of 'Imagine' by John Lennon.",
+        "class": "Type Text",
+        "target": "Imagine there's no heaven. It's easy if you try. No hell below us. Above us only sky."
+      },
+      {
+        "text": "Could you write down the steps to reset my password?",
+        "class": "Type Text",
+        "target": "Steps to reset password: 1. Go to the login page. 2. Click on 'Forgot Password.' 3. Enter your email address. 4. Follow the instructions sent to your email."
+      },
+      {
+        "text": "Can you transcribe this dictation from the meeting minutes? 'The budget for the upcoming project has been approved.'",
+        "class": "Type Text",
+        "target": "The budget for the upcoming project has been approved."
+      },
+      {
+        "text": "Please jot down the key points from the CEO's speech at the conference.",
+        "class": "Type Text",
+        "target": "Key points from CEO's speech: 1. Company's growth strategy. 2. New product launches. 3. Importance of customer satisfaction."
+      },
+      {
+        "text": "Could you write out the address for the venue of the event?",
+        "class": "Type Text",
+        "target": "Venue Address: 123 Main Street, Cityville, State, Zip Code."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the protagonist confesses their love.",
+        "class": "Type Text",
+        "target": "Protagonist: I've been wanting to tell you something. Love Interest: What is it? Protagonist: I love you."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor's appointment.",
+        "class": "Type Text",
+        "target": "Note from Doctor's Appointment: Prescription for medication. Follow-up appointment scheduled for next month."
+      },
+      {
+        "text": "Can you jot down the email address for customer support?",
+        "class": "Type Text",
+        "target": "Email Address for Customer Support: support@example.com"
+      },
+      {
+        "text": "Write out the main points from the documentary about climate change.",
+        "class": "Type Text",
+        "target": "Main points from climate change documentary: 1. Impact of greenhouse gases. 2. Rising sea levels. 3. Efforts to reduce carbon emissions."
+      },
+      {
+        "text": "Please transcribe the recipe for chocolate chip cookies.",
+        "class": "Type Text",
+        "target": "Chocolate Chip Cookies Recipe: Ingredients: flour, butter, sugar, chocolate chips. Instructions: Cream butter and sugar. Add flour and chocolate chips. Bake at 350°F for 10-12 minutes."
+      },
+      {
+        "text": "Could you write down the phone number for the nearest pizza delivery?",
+        "class": "Type Text",
+        "target": "Phone Number for Pizza Delivery: (555) 123-4567"
+      },
+      {
+        "text": "Please transcribe the dialogue from the courtroom scene in the movie 'A Few Good Men.'",
+        "class": "Type Text",
+        "target": "Judge: You can't handle the truth! Colonel Jessup: You want answers? Lieutenant Kaffee: I want the truth! Colonel Jessup: You can't handle the truth!"
+      },
+      {
+        "text": "Can you jot down the main points from the history lecture on World War II?",
+        "class": "Type Text",
+        "target": "Main points from World War II lecture: 1. Causes of the war. 2. Major battles and events. 3. Aftermath and impact."
+      },
+      {
+        "text": "Write out the instructions for assembling the IKEA bookshelf.",
+        "class": "Type Text",
+        "target": "IKEA Bookshelf Assembly Instructions: Step 1: Attach side panels to base. Step 2: Insert shelves into side panels. Step 3: Secure back panel. Step 4: Attach top panel."
+      },
+      {
+        "text": "I need you to transcribe this voicemail message: 'Hi, it's Mark. Just calling to confirm our meeting tomorrow at 2 p.m. See you then.'",
+        "class": "Type Text",
+        "target": "Hi, it's Mark. Just calling to confirm our meeting tomorrow at 2 p.m. See you then."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot internet connectivity issues.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot internet connectivity: 1. Check modem and router connections. 2. Restart devices. 3. Reset network settings if necessary."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Hey Jude' by The Beatles?",
+        "class": "Type Text",
+        "target": "Hey Jude, don't make it bad. Take a sad song and make it better."
+      },
+      {
+        "text": "Write down the address for the company's headquarters.",
+        "class": "Type Text",
+        "target": "Company Headquarters Address: 456 Oak Street, Suite 100, Cityville, State, Zip Code."
+      },
+      {
+        "text": "Can you jot down the steps to change a flat tire?",
+        "class": "Type Text",
+        "target": "Steps to change a flat tire: 1. Park in a safe location. 2. Loosen lug nuts. 3. Lift car with jack. 4. Remove flat tire and replace with spare. 5. Tighten lug nuts."
+      },
+      {
+        "text": "Please transcribe the speech given by the guest speaker at the conference.",
+        "class": "Type Text",
+        "target": "Speech Transcript: [Speaker]: Thank you for having me today. It's an honor to be here."
+      },
+      {
+        "text": "Could you write down the ingredients for a classic spaghetti Bolognese?",
+        "class": "Type Text",
+        "target": "Classic Spaghetti Bolognese Ingredients: spaghetti, ground beef, onion, garlic, tomato sauce. Instructions: Cook spaghetti. Brown ground beef with onion and garlic. Add tomato sauce. Serve over spaghetti."
+      },
+      {
+        "text": "Please transcribe the lyrics of 'Yesterday' by The Beatles.",
+        "class": "Type Text",
+        "target": "Yesterday, all my troubles seemed so far away. Now it looks as though they're here to stay."
+      },
+      {
+        "text": "Can you jot down the main points from the lecture on renewable energy?",
+        "class": "Type Text",
+        "target": "Main points from renewable energy lecture: 1. Types of renewable energy sources. 2. Advantages and disadvantages. 3. Current trends and future prospects."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the detective interrogates the suspect.",
+        "class": "Type Text",
+        "target": "Detective: Where were you last night? Suspect: I was at home. Detective: Can anyone confirm that? Suspect: No, I was alone."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the customer service call.",
+        "class": "Type Text",
+        "target": "Customer Service Call Transcript: [Customer]: I have a problem with my order. [Representative]: Let me check your order status."
+      },
+      {
+        "text": "Please write down the steps to assemble the new furniture.",
+        "class": "Type Text",
+        "target": "Assembly Instructions: Step 1: Identify all parts. Step 2: Read the instructions carefully. Step 3: Follow step-by-step assembly guide."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the two characters in the play?",
+        "class": "Type Text",
+        "target": "Character 1: How could you do this to me? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Write down the email address for technical support.",
+        "class": "Type Text",
+        "target": "Technical Support Email: support@example.com"
+      },
+      {
+        "text": "Can you jot down the main ideas from the seminar on mindfulness?",
+        "class": "Type Text",
+        "target": "Main ideas from mindfulness seminar: 1. Benefits of mindfulness practice. 2. Techniques for mindfulness meditation. 3. Incorporating mindfulness into daily life."
+      },
+      {
+        "text": "Please transcribe the speech given by the CEO at the annual meeting.",
+        "class": "Type Text",
+        "target": "Speech Transcript: [CEO]: Ladies and gentlemen, thank you for joining us today. I am pleased to report..."
+      },
+      {
+        "text": "Could you write down the steps to troubleshoot a leaking faucet?",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot leaking faucet: 1. Turn off water supply. 2. Identify source of leak. 3. Replace faulty parts. 4. Turn water supply back on."
+      },
+      {
+        "text": "Please transcribe the lyrics of 'Let It Be' by The Beatles.",
+        "class": "Type Text",
+        "target": "When I find myself in times of trouble, Mother Mary comes to me. Speaking words of wisdom, let it be."
+      },
+      {
+        "text": "Can you jot down the main points from the presentation on time management?",
+        "class": "Type Text",
+        "target": "Main points from time management presentation: 1. Setting priorities. 2. Creating a schedule. 3. Delegating tasks."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist confronts their fears.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm not afraid anymore. Fear: You can't escape me. Protagonist: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this voice message from my doctor regarding the medication dosage.",
+        "class": "Type Text",
+        "target": "Doctor's Voice Message: Please take one tablet daily with food."
+      },
+      {
+        "text": "Please write down the steps to change the oil in a car.",
+        "class": "Type Text",
+        "target": "Steps to change oil in car: 1. Lift car with jack. 2. Locate oil drain plug. 3. Drain old oil. 4. Replace oil filter. 5. Refill with new oil."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Smells Like Teen Spirit' by Nirvana?",
+        "class": "Type Text",
+        "target": "Load up on guns, bring your friends. It's fun to lose and to pretend."
+      },
+      {
+        "text": "Please jot down the main ideas from the workshop on effective communication.",
+        "class": "Type Text",
+        "target": "Main ideas from communication workshop: 1. Active listening skills. 2. Verbal and nonverbal communication. 3. Conflict resolution techniques."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero saves the day.",
+        "class": "Type Text",
+        "target": "Hero: Don't worry, I've got this. Villain: You'll never defeat me. Hero: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this note from the meeting regarding the project deadline.",
+        "class": "Type Text",
+        "target": "Meeting Note: Project deadline extended by one week."
+      },
+      {
+        "text": "Please write down the steps to configure email settings on a smartphone.",
+        "class": "Type Text",
+        "target": "Steps to configure email settings: 1. Open email app. 2. Go to settings. 3. Add new account. 4. Enter email address and password. 5. Configure server settings."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the characters in the TV series?",
+        "class": "Type Text",
+        "target": "Character 1: How could you betray me like this? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Please jot down the main points from the conference on environmental sustainability.",
+        "class": "Type Text",
+        "target": "Main points from sustainability conference: 1. Renewable energy initiatives. 2. Waste reduction strategies. 3. Conservation efforts."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist discovers the truth.",
+        "class": "Type Text",
+        "target": "Protagonist: I can't believe it. Truth: Sometimes the truth is hard to accept."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the police interview with the suspect.",
+        "class": "Type Text",
+        "target": "Police Interview Transcript: [Officer]: Where were you on the night of the incident? [Suspect]: I was at home."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a malfunctioning computer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot computer: 1. Restart computer. 2. Check for software updates. 3. Run antivirus scan. 4. Check hardware connections."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Hotel California' by Eagles?",
+        "class": "Type Text",
+        "target": "Welcome to the Hotel California. Such a lovely place, such a lovely face."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on stress management.",
+        "class": "Type Text",
+        "target": "Main ideas from stress management seminar: 1. Identifying sources of stress. 2. Coping strategies. 3. Relaxation techniques."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero faces their nemesis.",
+        "class": "Type Text",
+        "target": "Hero: I won't let you get away with this. Nemesis: You can try, but you'll fail."
+      },
+      {
+        "text": "I need you to transcribe this voicemail message from my boss regarding the meeting agenda.",
+        "class": "Type Text",
+        "target": "Boss's Voicemail: Please review the updated meeting agenda and come prepared."
+      },
+      {
+        "text": "Please write down the steps to bake a chocolate cake.",
+        "class": "Type Text",
+        "target": "Steps to bake chocolate cake: 1. Preheat oven to 350°F. 2. Mix flour, sugar, cocoa powder, and baking soda. 3. Add eggs, milk, and oil. 4. Pour batter into greased pan. 5. Bake for 30 minutes."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Bohemian Rhapsody' by Queen?",
+        "class": "Type Text",
+        "target": "Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality."
+      },
+      {
+        "text": "Please jot down the main points from the workshop on leadership skills.",
+        "class": "Type Text",
+        "target": "Main points from leadership workshop: 1. Communication skills. 2. Decision-making abilities. 3. Inspiring and motivating others."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist makes a life-changing decision.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm going to do it. Decision: Are you sure about this? Protagonist: Yes, it's time."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the medication dosage.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Take one tablet twice daily with meals."
+      },
+      {
+        "text": "Please write down the steps to set up a home theater system.",
+        "class": "Type Text",
+        "target": "Steps to set up home theater system: 1. Connect speakers to receiver. 2. Connect receiver to TV. 3. Configure audio settings. 4. Test sound."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the characters in the movie?",
+        "class": "Type Text",
+        "target": "Character 1: How could you do this to me? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Please jot down the main ideas from the conference on artificial intelligence.",
+        "class": "Type Text",
+        "target": "Main ideas from AI conference: 1. Machine learning algorithms. 2. Ethical considerations. 3. Future applications."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero confronts their inner demons.",
+        "class": "Type Text",
+        "target": "Hero: I won't let you control me anymore. Inner Demon: You can't escape from yourself."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the job interview.",
+        "class": "Type Text",
+        "target": "Job Interview Transcript: [Interviewer]: Tell me about your previous work experience. [Applicant]: I have five years of experience in..."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a malfunctioning printer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot printer: 1. Check paper tray. 2. Inspect ink or toner cartridges. 3. Restart printer. 4. Update printer drivers."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Stairway to Heaven' by Led Zeppelin?",
+        "class": "Type Text",
+        "target": "There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven."
+      },
+      {
+        "text": "Please jot down the main points from the workshop on conflict resolution.",
+        "class": "Type Text",
+        "target": "Main points from conflict resolution workshop: 1. Active listening skills. 2. Identifying underlying issues. 3. Negotiation techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist achieves their goals.",
+        "class": "Type Text",
+        "target": "Protagonist: I did it. Goal: Congratulations, you've succeeded."
+      },
+      {
+        "text": "I need you to transcribe this voicemail message from my colleague regarding the project deadline.",
+        "class": "Type Text",
+        "target": "Colleague's Voicemail: We need to meet tomorrow to discuss the project deadline."
+      },
+      {
+        "text": "Please write down the steps to bake a loaf of banana bread.",
+        "class": "Type Text",
+        "target": "Steps to bake banana bread: 1. Mash ripe bananas. 2. Mix with sugar, eggs, and flour. 3. Add baking powder and vanilla extract. 4. Bake for one hour."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Wonderwall' by Oasis?",
+        "class": "Type Text",
+        "target": "Today is gonna be the day that they're gonna throw it back to you."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on financial planning.",
+        "class": "Type Text",
+        "target": "Main ideas from financial planning seminar: 1. Budgeting strategies. 2. Investment options. 3. Retirement planning."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero faces impossible odds.",
+        "class": "Type Text",
+        "target": "Hero: I won't give up. Adversity: You can't win. Hero: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the treatment plan.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Start with medication twice daily for one week."
+      },
+      {
+        "text": "Please write down the steps to set up a wireless network at home.",
+        "class": "Type Text",
+        "target": "Steps to set up wireless network: 1. Connect router to modem. 2. Access router settings. 3. Configure network name and password. 4. Connect devices."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the characters in the TV show?",
+        "class": "Type Text",
+        "target": "Character 1: How could you betray me like this? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Please jot down the main points from the conference on digital marketing trends.",
+        "class": "Type Text",
+        "target": "Main points from digital marketing conference: 1. Social media strategies. 2. Content marketing trends. 3. SEO techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist overcomes their fears.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm not afraid anymore. Fear: You can't escape from me. Protagonist: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the therapy session.",
+        "class": "Type Text",
+        "target": "Therapy Session Transcript: [Therapist]: How are you feeling today? [Patient]: I've been struggling with..."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a slow computer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot slow computer: 1. Check for malware. 2. Clean up disk space. 3. Update software. 4. Upgrade hardware if necessary."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Smells Like Teen Spirit' by Nirvana?",
+        "class": "Type Text",
+        "target": "Load up on guns, bring your friends. It's fun to lose and to pretend."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on stress management.",
+        "class": "Type Text",
+        "target": "Main ideas from stress management seminar: 1. Identifying sources of stress. 2. Coping strategies. 3. Relaxation techniques."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero confronts their inner demons.",
+        "class": "Type Text",
+        "target": "Hero: I won't let you control me anymore. Inner Demon: You can't escape from yourself."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the medication dosage.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Take one tablet twice daily with meals."
+      },
+      {
+        "text": "Please write down the steps to set up a home theater system.",
+        "class": "Type Text",
+        "target": "Steps to set up home theater system: 1. Connect speakers to receiver. 2. Connect receiver to TV. 3. Configure audio settings. 4. Test sound."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Stairway to Heaven' by Led Zeppelin?",
+        "class": "Type Text",
+        "target": "There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven."
+      },
+      {
+        "text": "Please jot down the main points from the workshop on conflict resolution.",
+        "class": "Type Text",
+        "target": "Main points from conflict resolution workshop: 1. Active listening skills. 2. Identifying underlying issues. 3. Negotiation techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist makes a life-changing decision.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm going to do it. Decision: Are you sure about this? Protagonist: Yes, it's time."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the police interview with the suspect.",
+        "class": "Type Text",
+        "target": "Police Interview Transcript: [Officer]: Where were you on the night of the incident? [Suspect]: I was at home."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a malfunctioning printer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot printer: 1. Check paper tray. 2. Inspect ink or toner cartridges. 3. Restart printer. 4. Update printer drivers."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Wonderwall' by Oasis?",
+        "class": "Type Text",
+        "target": "Today is gonna be the day that they're gonna throw it back to you."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on financial planning.",
+        "class": "Type Text",
+        "target": "Main ideas from financial planning seminar: 1. Budgeting strategies. 2. Investment options. 3. Retirement planning."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero faces impossible odds.",
+        "class": "Type Text",
+        "target": "Hero: I won't give up. Adversity: You can't win. Hero: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the treatment plan.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Start with medication twice daily for one week."
+      },
+      {
+        "text": "Please write down the steps to set up a wireless network at home.",
+        "class": "Type Text",
+        "target": "Steps to set up wireless network: 1. Connect router to modem. 2. Access router settings. 3. Configure network name and password. 4. Connect devices."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the characters in the TV show?",
+        "class": "Type Text",
+        "target": "Character 1: How could you betray me like this? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Please jot down the main points from the conference on digital marketing trends.",
+        "class": "Type Text",
+        "target": "Main points from digital marketing conference: 1. Social media strategies. 2. Content marketing trends. 3. SEO techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist overcomes their fears.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm not afraid anymore. Fear: You can't escape from me. Protagonist: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the therapy session.",
+        "class": "Type Text",
+        "target": "Therapy Session Transcript: [Therapist]: How are you feeling today? [Patient]: I've been struggling with..."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a slow computer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot slow computer: 1. Check for malware. 2. Clean up disk space. 3. Update software. 4. Upgrade hardware if necessary."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Smells Like Teen Spirit' by Nirvana?",
+        "class": "Type Text",
+        "target": "Load up on guns, bring your friends. It's fun to lose and to pretend."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on stress management.",
+        "class": "Type Text",
+        "target": "Main ideas from stress management seminar: 1. Identifying sources of stress. 2. Coping strategies. 3. Relaxation techniques."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero confronts their inner demons.",
+        "class": "Type Text",
+        "target": "Hero: I won't let you control me anymore. Inner Demon: You can't escape from yourself."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the medication dosage.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Take one tablet twice daily with meals."
+      },
+      {
+        "text": "Please write down the steps to set up a home theater system.",
+        "class": "Type Text",
+        "target": "Steps to set up home theater system: 1. Connect speakers to receiver. 2. Connect receiver to TV. 3. Configure audio settings. 4. Test sound."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Stairway to Heaven' by Led Zeppelin?",
+        "class": "Type Text",
+        "target": "There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven."
+      },
+      {
+        "text": "Please jot down the main points from the workshop on conflict resolution.",
+        "class": "Type Text",
+        "target": "Main points from conflict resolution workshop: 1. Active listening skills. 2. Identifying underlying issues. 3. Negotiation techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist makes a life-changing decision.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm going to do it. Decision: Are you sure about this? Protagonist: Yes, it's time."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the police interview with the suspect.",
+        "class": "Type Text",
+        "target": "Police Interview Transcript: [Officer]: Where were you on the night of the incident? [Suspect]: I was at home."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a malfunctioning printer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot printer: 1. Check paper tray. 2. Inspect ink or toner cartridges. 3. Restart printer. 4. Update printer drivers."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Wonderwall' by Oasis?",
+        "class": "Type Text",
+        "target": "Today is gonna be the day that they're gonna throw it back to you."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on financial planning.",
+        "class": "Type Text",
+        "target": "Main ideas from financial planning seminar: 1. Budgeting strategies. 2. Investment options. 3. Retirement planning."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero faces impossible odds.",
+        "class": "Type Text",
+        "target": "Hero: I won't give up. Adversity: You can't win. Hero: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the treatment plan.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Start with medication twice daily for one week."
+      },
+      {
+        "text": "Please write down the steps to set up a wireless network at home.",
+        "class": "Type Text",
+        "target": "Steps to set up wireless network: 1. Connect router to modem. 2. Access router settings. 3. Configure network name and password. 4. Connect devices."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the characters in the TV show?",
+        "class": "Type Text",
+        "target": "Character 1: How could you betray me like this? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Please jot down the main points from the conference on digital marketing trends.",
+        "class": "Type Text",
+        "target": "Main points from digital marketing conference: 1. Social media strategies. 2. Content marketing trends. 3. SEO techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist overcomes their fears.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm not afraid anymore. Fear: You can't escape from me. Protagonist: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the therapy session.",
+        "class": "Type Text",
+        "target": "Therapy Session Transcript: [Therapist]: How are you feeling today? [Patient]: I've been struggling with..."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a slow computer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot slow computer: 1. Check for malware. 2. Clean up disk space. 3. Update software. 4. Upgrade hardware if necessary."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Smells Like Teen Spirit' by Nirvana?",
+        "class": "Type Text",
+        "target": "Load up on guns, bring your friends. It's fun to lose and to pretend."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on stress management.",
+        "class": "Type Text",
+        "target": "Main ideas from stress management seminar: 1. Identifying sources of stress. 2. Coping strategies. 3. Relaxation techniques."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero confronts their inner demons.",
+        "class": "Type Text",
+        "target": "Hero: I won't let you control me anymore. Inner Demon: You can't escape from yourself."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the medication dosage.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Take one tablet twice daily with meals."
+      },
+      {
+        "text": "Please write down the steps to set up a home theater system.",
+        "class": "Type Text",
+        "target": "Steps to set up home theater system: 1. Connect speakers to receiver. 2. Connect receiver to TV. 3. Configure audio settings. 4. Test sound."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Stairway to Heaven' by Led Zeppelin?",
+        "class": "Type Text",
+        "target": "There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven."
+      },
+      {
+        "text": "Please jot down the main points from the workshop on conflict resolution.",
+        "class": "Type Text",
+        "target": "Main points from conflict resolution workshop: 1. Active listening skills. 2. Identifying underlying issues. 3. Negotiation techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist makes a life-changing decision.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm going to do it. Decision: Are you sure about this? Protagonist: Yes, it's time."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the police interview with the suspect.",
+        "class": "Type Text",
+        "target": "Police Interview Transcript: [Officer]: Where were you on the night of the incident? [Suspect]: I was at home."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a malfunctioning printer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot printer: 1. Check paper tray. 2. Inspect ink or toner cartridges. 3. Restart printer. 4. Update printer drivers."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Wonderwall' by Oasis?",
+        "class": "Type Text",
+        "target": "Today is gonna be the day that they're gonna throw it back to you."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on financial planning.",
+        "class": "Type Text",
+        "target": "Main ideas from financial planning seminar: 1. Budgeting strategies. 2. Investment options. 3. Retirement planning."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero faces impossible odds.",
+        "class": "Type Text",
+        "target": "Hero: I won't give up. Adversity: You can't win. Hero: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the treatment plan.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Start with medication twice daily for one week."
+      },
+      {
+        "text": "Please write down the steps to set up a wireless network at home.",
+        "class": "Type Text",
+        "target": "Steps to set up wireless network: 1. Connect router to modem. 2. Access router settings. 3. Configure network name and password. 4. Connect devices."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the characters in the TV show?",
+        "class": "Type Text",
+        "target": "Character 1: How could you betray me like this? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Please jot down the main points from the conference on digital marketing trends.",
+        "class": "Type Text",
+        "target": "Main points from digital marketing conference: 1. Social media strategies. 2. Content marketing trends. 3. SEO techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist overcomes their fears.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm not afraid anymore. Fear: You can't escape from me. Protagonist: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the therapy session.",
+        "class": "Type Text",
+        "target": "Therapy Session Transcript: [Therapist]: How are you feeling today? [Patient]: I've been struggling with..."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a slow computer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot slow computer: 1. Check for malware. 2. Clean up disk space. 3. Update software. 4. Upgrade hardware if necessary."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Smells Like Teen Spirit' by Nirvana?",
+        "class": "Type Text",
+        "target": "Load up on guns, bring your friends. It's fun to lose and to pretend."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on stress management.",
+        "class": "Type Text",
+        "target": "Main ideas from stress management seminar: 1. Identifying sources of stress. 2. Coping strategies. 3. Relaxation techniques."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero confronts their inner demons.",
+        "class": "Type Text",
+        "target": "Hero: I won't let you control me anymore. Inner Demon: You can't escape from yourself."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the medication dosage.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Take one tablet twice daily with meals."
+      },
+      {
+        "text": "Please write down the steps to set up a home theater system.",
+        "class": "Type Text",
+        "target": "Steps to set up home theater system: 1. Connect speakers to receiver. 2. Connect receiver to TV. 3. Configure audio settings. 4. Test sound."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Stairway to Heaven' by Led Zeppelin?",
+        "class": "Type Text",
+        "target": "There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven."
+      },
+      {
+        "text": "Please jot down the main points from the workshop on conflict resolution.",
+        "class": "Type Text",
+        "target": "Main points from conflict resolution workshop: 1. Active listening skills. 2. Identifying underlying issues. 3. Negotiation techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist makes a life-changing decision.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm going to do it. Decision: Are you sure about this? Protagonist: Yes, it's time."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the police interview with the suspect.",
+        "class": "Type Text",
+        "target": "Police Interview Transcript: [Officer]: Where were you on the night of the incident? [Suspect]: I was at home."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a malfunctioning printer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot printer: 1. Check paper tray. 2. Inspect ink or toner cartridges. 3. Restart printer. 4. Update printer drivers."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Wonderwall' by Oasis?",
+        "class": "Type Text",
+        "target": "Today is gonna be the day that they're gonna throw it back to you."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on financial planning.",
+        "class": "Type Text",
+        "target": "Main ideas from financial planning seminar: 1. Budgeting strategies. 2. Investment options. 3. Retirement planning."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero faces impossible odds.",
+        "class": "Type Text",
+        "target": "Hero: I won't give up. Adversity: You can't win. Hero: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the treatment plan.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Start with medication twice daily for one week."
+      },
+      {
+        "text": "Please write down the steps to set up a wireless network at home.",
+        "class": "Type Text",
+        "target": "Steps to set up wireless network: 1. Connect router to modem. 2. Access router settings. 3. Configure network name and password. 4. Connect devices."
+      },
+      {
+        "text": "Could you transcribe the dialogue from the argument between the characters in the TV show?",
+        "class": "Type Text",
+        "target": "Character 1: How could you betray me like this? Character 2: I had no choice. Character 1: That's not good enough!"
+      },
+      {
+        "text": "Please jot down the main points from the conference on digital marketing trends.",
+        "class": "Type Text",
+        "target": "Main points from digital marketing conference: 1. Social media strategies. 2. Content marketing trends. 3. SEO techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist overcomes their fears.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm not afraid anymore. Fear: You can't escape from me. Protagonist: Watch me."
+      },
+      {
+        "text": "I need you to transcribe this audio recording of the therapy session.",
+        "class": "Type Text",
+        "target": "Therapy Session Transcript: [Therapist]: How are you feeling today? [Patient]: I've been struggling with..."
+      },
+      {
+        "text": "Please write down the steps to troubleshoot a slow computer.",
+        "class": "Type Text",
+        "target": "Steps to troubleshoot slow computer: 1. Check for malware. 2. Clean up disk space. 3. Update software. 4. Upgrade hardware if necessary."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Smells Like Teen Spirit' by Nirvana?",
+        "class": "Type Text",
+        "target": "Load up on guns, bring your friends. It's fun to lose and to pretend."
+      },
+      {
+        "text": "Please jot down the main ideas from the seminar on stress management.",
+        "class": "Type Text",
+        "target": "Main ideas from stress management seminar: 1. Identifying sources of stress. 2. Coping strategies. 3. Relaxation techniques."
+      },
+      {
+        "text": "Write down the dialogue from the scene where the hero confronts their inner demons.",
+        "class": "Type Text",
+        "target": "Hero: I won't let you control me anymore. Inner Demon: You can't escape from yourself."
+      },
+      {
+        "text": "I need you to transcribe this note from the doctor regarding the medication dosage.",
+        "class": "Type Text",
+        "target": "Doctor's Note: Take one tablet twice daily with meals."
+      },
+      {
+        "text": "Please write down the steps to set up a home theater system.",
+        "class": "Type Text",
+        "target": "Steps to set up home theater system: 1. Connect speakers to receiver. 2. Connect receiver to TV. 3. Configure audio settings. 4. Test sound."
+      },
+      {
+        "text": "Could you transcribe the lyrics of 'Stairway to Heaven' by Led Zeppelin?",
+        "class": "Type Text",
+        "target": "There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven."
+      },
+      {
+        "text": "Please jot down the main points from the workshop on conflict resolution.",
+        "class": "Type Text",
+        "target": "Main points from conflict resolution workshop: 1. Active listening skills. 2. Identifying underlying issues. 3. Negotiation techniques."
+      },
+      {
+        "text": "Write out the dialogue from the scene where the protagonist makes a life-changing decision.",
+        "class": "Type Text",
+        "target": "Protagonist: I'm going to do it. Decision: Are you sure about this? Protagonist: Yes, it's time."
+      }
+  ]
+  

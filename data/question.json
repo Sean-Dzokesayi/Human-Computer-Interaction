@@ -1,0 +1,633 @@
+[
+    {
+      "text": "What is the capital of France?",
+      "class": "Question",
+      "target": "The capital of France is Paris."
+    },
+    {
+      "text": "How do you cook spaghetti?",
+      "class": "Question",
+      "target": "To cook spaghetti, boil a pot of water, add salt, then add the spaghetti and cook until it's al dente. Drain the water and serve with your favorite sauce."
+    },
+    {
+      "text": "Who painted the Mona Lisa?",
+      "class": "Question",
+      "target": "The Mona Lisa was painted by Leonardo da Vinci."
+    },
+    {
+      "text": "What time does the train arrive?",
+      "class": "Question",
+      "target": "The train is scheduled to arrive at 10:15 AM."
+    },
+    {
+      "text": "Where can I find good sushi?",
+      "class": "Question",
+      "target": "You can find good sushi at 'Sushi Heaven' on Main Street."
+    },
+    {
+      "text": "When is the next meeting?",
+      "class": "Question",
+      "target": "The next meeting is scheduled for Thursday at 2:00 PM."
+    },
+    {
+      "text": "How do I reset my password?",
+      "class": "Question",
+      "target": "To reset your password, go to the login page and click on 'Forgot Password'. Follow the instructions to reset it."
+    },
+    {
+      "text": "What is the meaning of life?",
+      "class": "Question",
+      "target": "The meaning of life is subjective and varies from person to person. Some believe it's about finding happiness, others think it's about fulfilling a purpose or leaving a legacy."
+    },
+    {
+      "text": "Where is the nearest gas station?",
+      "class": "Question",
+      "target": "The nearest gas station is on Elm Street, about two blocks away."
+    },
+    {
+      "text": "How can I improve my cooking skills?",
+      "class": "Question",
+      "target": "To improve your cooking skills, try experimenting with new recipes, watch cooking tutorials, and practice regularly."
+    },
+    {
+      "text": "Please explain the theory of relativity.",
+      "class": "Question",
+      "target": "The theory of relativity, developed by Albert Einstein, describes how space and time are intertwined and affected by gravity. It consists of two main ideas: special relativity and general relativity."
+    },
+    {
+      "text": "What is the population of New York City?",
+      "class": "Question",
+      "target": "As of 2020, the population of New York City is approximately 8.4 million people."
+    },
+    {
+      "text": "Who won the Nobel Prize in Literature last year?",
+      "class": "Question",
+      "target": "The Nobel Prize in Literature last year was awarded to Louise Glück."
+    },
+    {
+      "text": "Where can I buy concert tickets?",
+      "class": "Question",
+      "target": "You can buy concert tickets online through websites like Ticketmaster or at the venue's box office."
+    },
+    {
+      "text": "How do I change the oil in my car?",
+      "class": "Question",
+      "target": "To change the oil in your car, you'll need to lift the car, drain the old oil, replace the oil filter, and refill with new oil according to the manufacturer's recommendations."
+    },
+    {
+      "text": "What are the symptoms of COVID-19?",
+      "class": "Question",
+      "target": "Common symptoms of COVID-19 include fever, cough, and shortness of breath. Some people may also experience fatigue, body aches, sore throat, loss of taste or smell, diarrhea, or other symptoms."
+    },
+    {
+      "text": "What is the speed of light?",
+      "class": "Question",
+      "target": "The speed of light in a vacuum is approximately 299,792 kilometers per second (about 186,282 miles per second), according to Einstein's theory of relativity."
+    },
+    {
+      "text": "Who wrote 'To Kill a Mockingbird'?",
+      "class": "Question",
+      "target": "To Kill a Mockingbird was written by Harper Lee."
+    },
+    {
+      "text": "How do I start a small business?",
+      "class": "Question",
+      "target": "To start a small business, you'll need to develop a business plan, choose a legal structure, register your business, obtain necessary permits and licenses, and secure funding."
+    },
+    {
+      "text": "Where can I find reliable news sources?",
+      "class": "Question",
+      "target": "You can find reliable news sources from established outlets such as BBC News, The New York Times, CNN, or Reuters."
+    },
+    {
+      "text": "What causes earthquakes?",
+      "class": "Question",
+      "target": "Earthquakes are caused by the sudden release of energy stored in the Earth's crust, often as a result of tectonic plate movement."
+    },
+    {
+      "text": "Who discovered penicillin?",
+      "class": "Question",
+      "target": "Penicillin was discovered by Sir Alexander Fleming in 1928."
+    },
+    {
+      "text": "How do I get rid of ants in my kitchen?",
+      "class": "Question",
+      "target": "To get rid of ants in your kitchen, try using ant baits, sealing entry points, keeping surfaces clean and dry, and removing food sources."
+    },
+    {
+      "text": "What is the average rainfall in Seattle?",
+      "class": "Question",
+      "target": "The average annual rainfall in Seattle is around 38 inches."
+    },
+    {
+      "text": "Where can I learn to play the guitar?",
+      "class": "Question",
+      "target": "You can learn to play the guitar through online tutorials, music schools, or private lessons with a teacher."
+    },
+    {
+      "text": "How do I become a better writer?",
+      "class": "Question",
+      "target": "To become a better writer, practice writing regularly, read widely, study grammar and style, and seek feedback from others."
+    },
+    {
+      "text": "What are the benefits of meditation?",
+      "class": "Question",
+      "target": "The benefits of meditation include reduced stress, improved concentration, increased self-awareness, and enhanced emotional well-being."
+    },
+    {
+      "text": "Where can I find historical landmarks in Rome?",
+      "class": "Question",
+      "target": "You can find historical landmarks in Rome such as the Colosseum, the Roman Forum, the Pantheon, and the Vatican City."
+    },
+    {
+      "text": "Who invented the telephone?",
+      "class": "Question",
+      "target": "The telephone was invented by Alexander Graham Bell."
+    },
+    {
+      "text": "How do I say 'hello' in Spanish?",
+      "class": "Question",
+      "target": "To say 'hello' in Spanish, you can use the word 'Hola'."
+    },
+    {
+      "text": "What is the boiling point of water?",
+      "class": "Question",
+      "target": "The boiling point of water at sea level is 100 degrees Celsius or 212 degrees Fahrenheit."
+    },
+    {
+      "text": "Who discovered America?",
+      "class": "Question",
+      "target": "America was discovered by Christopher Columbus in 1492."
+    },
+    {
+      "text": "How do I tie a tie?",
+      "class": "Question",
+      "target": "To tie a tie, start with the wide end of the tie on your right and the narrow end on your left. Cross the wide end over the narrow end, then bring it up through the loop between the collar and the tie. Wrap it around the narrow end and bring it down through the loop again. Finally, tighten the knot and adjust as needed."
+    },
+    {
+      "text": "What is the currency of Japan?",
+      "class": "Question",
+      "target": "The currency of Japan is the Japanese Yen (JPY)."
+    },
+    {
+      "text": "Who was the first man to walk on the moon?",
+      "class": "Question",
+      "target": "The first man to walk on the moon was Neil Armstrong, during the Apollo 11 mission in 1969."
+    },
+    {
+      "text": "How do I change a flat tire?",
+      "class": "Question",
+      "target": "To change a flat tire, first, find a safe location to pull over. Then, loosen the lug nuts, jack up the car, remove the lug nuts and the flat tire, mount the spare tire, tighten the lug nuts, and lower the car."
+    },
+    {
+      "text": "What is the meaning of 'carpe diem'?",
+      "class": "Question",
+      "target": "The phrase 'carpe diem' translates to 'seize the day' in English. It encourages living in the present and making the most of each moment."
+    },
+    {
+      "text": "Who painted 'Starry Night'?",
+      "class": "Question",
+      "target": "'Starry Night' was painted by Vincent van Gogh."
+    },
+    {
+      "text": "How do I improve my memory?",
+      "class": "Question",
+      "target": "To improve your memory, try techniques such as mnemonic devices, spaced repetition, getting enough sleep, staying mentally active, and maintaining a healthy lifestyle."
+    },
+    {
+      "text": "What is the largest mammal?",
+      "class": "Question",
+      "target": "The largest mammal is the blue whale."
+    },
+    {
+      "text": "Where is the Great Wall of China located?",
+      "class": "Question",
+      "target": "The Great Wall of China is located in northern China, stretching approximately 13,170 miles (21,196 kilometers)."
+    },
+    {
+      "text": "Who is the current president of the United States?",
+      "class": "Question",
+      "target": "As of 2024, the current president of the United States is Joe Biden."
+    },
+    {
+      "text": "How do I cook a perfect steak?",
+      "class": "Question",
+      "target": "To cook a perfect steak, start by seasoning it with salt and pepper, then sear it in a hot pan or grill to your desired level of doneness."
+    },
+    {
+      "text": "What is the meaning of 'hakuna matata'?",
+      "class": "Question",
+      "target": "'Hakuna Matata' is a Swahili phrase that roughly translates to 'no worries' in English. It gained popularity from its use in the Disney movie 'The Lion King'."
+    },
+    {
+      "text": "Where can I find good pizza in New York City?",
+      "class": "Question",
+      "target": "You can find good pizza in New York City at famous pizzerias like Lombardi's, Di Fara, or Grimaldi's."
+    },
+    {
+      "text": "How do I make a good first impression?",
+      "class": "Question",
+      "target": "To make a good first impression, be punctual, dress appropriately, maintain eye contact, and show genuine interest in the other person."
+    },
+    {
+      "text": "What is the meaning of 'YOLO'?",
+      "class": "Question",
+      "target": "'YOLO' is an acronym for 'you only live once', often used to justify taking risks or living life to the fullest."
+    },
+    {
+      "text": "Who wrote '1984'?",
+      "class": "Question",
+      "target": "'1984' was written by George Orwell."
+    },
+    {
+      "text": "How do I make homemade ice cream?",
+      "class": "Question",
+      "target": "To make homemade ice cream, you'll need ingredients like cream, sugar, and flavorings. Mix them together, then churn the mixture in an ice cream maker until it reaches the desired consistency."
+    },
+    {
+      "text": "What is the tallest mountain in the world?",
+      "class": "Question",
+      "target": "The tallest mountain in the world, measured from base to summit, is Mount Everest, located in the Himalayas."
+    },
+    {
+      "text": "Where can I find good sushi in Tokyo?",
+      "class": "Question",
+      "target": "You can find good sushi in Tokyo at renowned sushi restaurants like Sukiyabashi Jiro, Sushi Saito, or Sushi Dai."
+    },
+    {
+      "text": "How do I apply for a passport?",
+      "class": "Question",
+      "target": "To apply for a passport, visit your local passport acceptance facility, fill out Form DS-11, submit required documents like proof of citizenship and identity, and pay the applicable fees."
+    },
+    {
+      "text": "What is the meaning of 'c'est la vie'?",
+      "class": "Question",
+      "target": "'C'est la vie' is a French phrase that translates to 'that's life' or 'such is life' in English, expressing acceptance or resignation to life's ups and downs."
+    },
+    {
+      "text": "Who founded Facebook?",
+      "class": "Question",
+      "target": "Facebook was founded by Mark Zuckerberg, along with his college roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes."
+    },
+    {
+      "text": "How do I improve my public speaking skills?",
+      "class": "Question",
+      "target": "To improve your public speaking skills, practice speaking in front of an audience, prepare and rehearse your speeches, work on body language and vocal delivery, and seek feedback from others."
+    },
+    {
+      "text": "What is the meaning of 'bon appétit'?",
+      "class": "Question",
+      "target": "'Bon appétit' is a French phrase used to wish someone a good meal or to enjoy their food."
+    },
+    {
+      "text": "Who was the first woman to win a Nobel Prize?",
+      "class": "Question",
+      "target": "The first woman to win a Nobel Prize was Marie Curie, who won the Nobel Prize in Physics in 1903, and later in Chemistry in 1911."
+    },
+    {
+      "text": "How do I start a garden?",
+      "class": "Question",
+      "target": "To start a garden, choose a location with good sunlight, prepare the soil, select appropriate plants, and water and care for them regularly."
+    },
+    {
+      "text": "What is the meaning of 'carpe noctem'?",
+      "class": "Question",
+      "target": "'Carpe noctem' is a Latin phrase that translates to 'seize the night' in English, encouraging making the most of the nighttime hours or opportunities."
+    },
+    {
+      "text": "Who is the author of 'Harry Potter'?",
+      "class": "Question",
+      "target": "The author of 'Harry Potter' is J.K. Rowling."
+    },
+    {
+      "text": "How do I take care of a pet rabbit?",
+      "class": "Question",
+      "target": "To take care of a pet rabbit, provide a suitable living environment, feed a balanced diet of hay, vegetables, and pellets, handle gently, and provide regular veterinary care."
+    },
+    {
+      "text": "What is the meaning of 'Hasta la vista'?",
+      "class": "Question",
+      "target": "'Hasta la vista' is a Spanish phrase that translates to 'until we meet again' in English."
+    },
+    {
+      "text": "Who painted 'The Last Supper'?",
+      "class": "Question",
+      "target": "'The Last Supper' was painted by Leonardo da Vinci."
+    },
+    {
+      "text": "How do I make a budget?",
+      "class": "Question",
+      "target": "To make a budget, track your income and expenses, set financial goals, allocate money to different categories, and adjust as needed."
+    },
+    {
+      "text": "What is the meaning of 'veni, vidi, vici'?",
+      "class": "Question",
+      "target": "'Veni, vidi, vici' is a Latin phrase attributed to Julius Caesar, meaning 'I came, I saw, I conquered'."
+    },
+    {
+      "text": "Who composed 'The Four Seasons'?",
+      "class": "Question",
+      "target": "'The Four Seasons' was composed by Antonio Vivaldi."
+    },
+    {
+      "text": "How do I prevent sunburn?",
+      "class": "Question",
+      "target": "To prevent sunburn, wear sunscreen with a high SPF, seek shade, wear protective clothing, and avoid prolonged sun exposure during peak hours."
+    },
+    {
+      "text": "What is the meaning of 'ad hoc'?",
+      "class": "Question",
+      "target": "'Ad hoc' is a Latin phrase that translates to 'for this purpose' or 'for this occasion' in English, often used to describe something created or done specifically for a particular situation."
+    },
+    {
+      "text": "Who discovered the theory of evolution?",
+      "class": "Question",
+      "target": "The theory of evolution was formulated by Charles Darwin."
+    },
+    {
+      "text": "How do I invest in stocks?",
+      "class": "Question",
+      "target": "To invest in stocks, open a brokerage account, research and select stocks, monitor the market, and consider factors like diversification and risk tolerance."
+    },
+    {
+      "text": "What is the meaning of 'carpe diem'?",
+      "class": "Question",
+      "target": "'Carpe diem' is a Latin phrase that translates to 'seize the day' in English, encouraging making the most of the present moment."
+    },
+    {
+      "text": "Who painted the ceiling of the Sistine Chapel?",
+      "class": "Question",
+      "target": "The ceiling of the Sistine Chapel was painted by Michelangelo."
+    },
+    {
+      "text": "How do I start a blog?",
+      "class": "Question",
+      "target": "To start a blog, choose a blogging platform, select a domain name, design your blog, create content, and promote it through social media and other channels."
+    },
+    {
+      "text": "What is the meaning of 'hasta mañana'?",
+      "class": "Question",
+      "target": "'Hasta mañana' is a Spanish phrase that translates to 'see you tomorrow' in English."
+    },
+    {
+      "text": "Who invented the light bulb?",
+      "class": "Question",
+      "target": "The light bulb was invented by Thomas Edison."
+    },
+    {
+      "text": "How do I make chocolate chip cookies?",
+      "class": "Question",
+      "target": "To make chocolate chip cookies, cream together butter and sugar, add eggs and vanilla, mix in flour, baking soda, and salt, then stir in chocolate chips. Drop spoonfuls onto a baking sheet and bake until golden brown."
+    },
+    {
+      "text": "What is the meaning of 'bon voyage'?",
+      "class": "Question",
+      "target": "'Bon voyage' is a French phrase used to wish someone a good journey or safe travels."
+    },
+    {
+      "text": "Who wrote 'Romeo and Juliet'?",
+      "class": "Question",
+      "target": "'Romeo and Juliet' was written by William Shakespeare."
+    },
+    {
+      "text": "How do I start a podcast?",
+      "class": "Question",
+      "target": "To start a podcast, choose a topic and format, obtain necessary equipment, record and edit episodes, and distribute them through hosting platforms like Spotify or Apple Podcasts."
+    },
+    {
+      "text": "What is the meaning of 'carpe noctem'?",
+      "class": "Question",
+      "target": "'Carpe noctem' is a Latin phrase that translates to 'seize the night' in English, encouraging making the most of the nighttime hours or opportunities."
+    },
+    {
+      "text": "Who discovered electricity?",
+      "class": "Question",
+      "target": "Electricity was not discovered by a single person, but rather its principles were gradually understood through the work of scientists like Benjamin Franklin, Michael Faraday, and Alessandro Volta."
+    },
+    {
+      "text": "How do I train a dog?",
+      "class": "Question",
+      "target": "To train a dog, use positive reinforcement techniques such as treats and praise, be consistent with commands, and practice patience and persistence."
+    },
+    {
+      "text": "What is the meaning of 'carpe diem'?",
+      "class": "Question",
+      "target": "'Carpe diem' is a Latin phrase that translates to 'seize the day' in English, encouraging living in the moment and making the most of opportunities."
+    },
+    {
+      "text": "Who was the first woman to fly solo across the Atlantic?",
+      "class": "Question",
+      "target": "The first woman to fly solo across the Atlantic Ocean was Amelia Earhart."
+    },
+    {
+      "text": "How do I make a resume?",
+      "class": "Question",
+      "target": "To make a resume, choose a format, include your contact information, education, work experience, skills, and relevant achievements, and tailor it to the job you're applying for."
+    },
+    {
+      "text": "What is the meaning of 'adiós'?",
+      "class": "Question",
+      "target": "'Adiós' is a Spanish word that translates to 'goodbye' in English."
+    },
+    {
+      "text": "Who painted 'The Persistence of Memory'?",
+      "class": "Question",
+      "target": "'The Persistence of Memory' was painted by Salvador Dalí."
+    },
+    {
+      "text": "How do I start learning a new language?",
+      "class": "Question",
+      "target": "To start learning a new language, choose a language, set realistic goals, use resources like textbooks, online courses, and language apps, practice speaking and listening, and immerse yourself in the language as much as possible."
+    },
+    {
+      "text": "What is the meaning of 'c'est la vie'?",
+      "class": "Question",
+      "target": "'C'est la vie' is a French phrase that translates to 'that's life' in English, expressing acceptance of life's unpredictable or unfortunate events."
+    },
+    {
+      "text": "Who composed 'The Nutcracker'?",
+      "class": "Question",
+      "target": "'The Nutcracker' was composed by Pyotr Ilyich Tchaikovsky."
+    },
+    {
+      "text": "How do I change a diaper?",
+      "class": "Question",
+      "target": "To change a diaper, lay the baby on a changing mat, unfasten the dirty diaper, wipe the baby's bottom with baby wipes, lift the baby's legs and remove the dirty diaper, then place a clean diaper under the baby and fasten it snugly."
+    },
+    {
+      "text": "What is the meaning of 'carpe diem'?",
+      "class": "Question",
+      "target": "'Carpe diem' is a Latin phrase that translates to 'seize the day' in English, emphasizing the importance of living in the present moment and making the most of opportunities."
+    },
+    {
+      "text": "Who founded Amazon?",
+      "class": "Question",
+      "target": "Amazon was founded by Jeff Bezos."
+    },
+    {
+      "text": "How do I save money?",
+      "class": "Question",
+      "target": "To save money, create a budget, track your expenses, prioritize needs over wants, look for ways to reduce spending, and consider automated savings methods like direct deposit or automatic transfers."
+    },
+    {
+      "text": "What is the meaning of 'hasta luego'?",
+      "class": "Question",
+      "target": "'Hasta luego' is a Spanish phrase that translates to 'see you later' in English."
+    },
+    {
+      "text": "Who wrote 'The Catcher in the Rye'?",
+      "class": "Question",
+      "target": "'The Catcher in the Rye' was written by J.D. Salinger."
+    },
+    {
+      "text": "How do I cook rice?",
+      "class": "Question",
+      "target": "To cook rice, rinse the rice in cold water, then add it to a pot with the appropriate amount of water or broth. Bring to a boil, then reduce heat to low, cover, and simmer until the liquid is absorbed and the rice is tender."
+    },
+    {
+      "text": "What is the meaning of 'ad nauseam'?",
+      "class": "Question",
+      "target": "'Ad nauseam' is a Latin phrase that translates to 'to the point of nausea' in English, often used to describe something repetitive or excessive."
+    },
+    {
+      "text": "Who discovered penicillin?",
+      "class": "Question",
+      "target": "Penicillin was discovered by Alexander Fleming."
+    },
+    {
+      "text": "How do I make a good impression in a job interview?",
+      "class": "Question",
+      "target": "To make a good impression in a job interview, dress professionally, arrive on time, research the company, prepare answers to common interview questions, ask thoughtful questions, and follow up with a thank-you email."
+    },
+    {
+      "text": "What is the meaning of 'ad infinitum'?",
+      "class": "Question",
+      "target": "'Ad infinitum' is a Latin phrase that translates to 'to infinity' or 'forever' in English, often used to describe something continuing endlessly."
+    },
+    {
+      "text": "Who invented the World Wide Web?",
+      "class": "Question",
+      "target": "The World Wide Web was invented by Tim Berners-Lee."
+    },
+    {
+      "text": "How do I get rid of fruit flies?",
+      "class": "Question",
+      "target": "To get rid of fruit flies, eliminate food sources, clean up spills and crumbs, use traps or baits, and consider natural repellents like vinegar or essential oils."
+    },
+    {
+      "text": "What is the meaning of 'bon appétit'?",
+      "class": "Question",
+      "target": "'Bon appétit' is a French phrase that translates to 'enjoy your meal' in English, used to wish someone a good meal or to express enjoyment of food."
+    },
+    {
+      "text": "Who composed 'The Magic Flute'?",
+      "class": "Question",
+      "target": "'The Magic Flute' was composed by Wolfgang Amadeus Mozart."
+    },
+    {
+      "text": "How do I make a good cup of coffee?",
+      "class": "Question",
+      "target": "To make a good cup of coffee, start with freshly ground coffee beans, use the correct coffee-to-water ratio, and brew using a method that suits your preferences, such as pour-over, French press, or espresso."
+    },
+    {
+      "text": "What is the meaning of 'hasta luego'?",
+      "class": "Question",
+      "target": "'Hasta luego' is a Spanish phrase that translates to 'see you later' in English."
+    },
+    {
+      "text": "Who was the first woman to win a Nobel Prize?",
+      "class": "Question",
+      "target": "The first woman to win a Nobel Prize was Marie Curie, who won the Nobel Prize in Physics in 1903."
+    },
+    {
+      "text": "How do I make a chocolate cake?",
+      "class": "Question",
+      "target": "To make a chocolate cake, mix together flour, sugar, cocoa powder, baking powder, baking soda, salt, eggs, milk, oil, and vanilla extract. Pour the batter into a greased cake pan and bake until a toothpick inserted into the center comes out clean."
+    },
+    {
+      "text": "What is the meaning of 'caveat emptor'?",
+      "class": "Question",
+      "target": "'Caveat emptor' is a Latin phrase that translates to 'let the buyer beware' in English, warning buyers to be cautious and aware of the risks when purchasing goods or services."
+    },
+    {
+      "text": "Who invented the telephone?",
+      "class": "Question",
+      "target": "The telephone was invented by Alexander Graham Bell."
+    },
+    {
+      "text": "How do I make homemade pizza?",
+      "class": "Question",
+      "target": "To make homemade pizza, prepare dough using flour, yeast, water, and salt. Roll out the dough, add sauce, cheese, and toppings, then bake in a hot oven until the crust is golden and the cheese is bubbly."
+    },
+    {
+      "text": "What is the meaning of 'in vino veritas'?",
+      "class": "Question",
+      "target": "'In vino veritas' is a Latin phrase that translates to 'in wine, there is truth' in English, often used to suggest that people are more honest or open when intoxicated."
+    },
+    {
+      "text": "Who painted 'The Starry Night'?",
+      "class": "Question",
+      "target": "'The Starry Night' was painted by Vincent van Gogh."
+    },
+    {
+      "text": "How do I make a salad?",
+      "class": "Question",
+      "target": "To make a salad, wash and chop your choice of fresh vegetables and greens, add toppings like cheese, nuts, or fruit, and dress with vinaigrette or your favorite dressing."
+    },
+    {
+      "text": "What is the meaning of 'c'est la vie'?",
+      "class": "Question",
+      "target": "'C'est la vie' is a French phrase that translates to 'that's life' in English, often used to express resignation or acceptance of life's uncertainties."
+    },
+    {
+      "text": "Who wrote 'Pride and Prejudice'?",
+      "class": "Question",
+      "target": "'Pride and Prejudice' was written by Jane Austen."
+    },
+    {
+      "text": "How do I make scrambled eggs?",
+      "class": "Question",
+      "target": "To make scrambled eggs, crack eggs into a bowl, whisk with a fork, season with salt and pepper, and cook in a pan over medium heat, stirring gently until they reach the desired consistency."
+    },
+    {
+      "text": "What is the meaning of 'carpe diem'?",
+      "class": "Question",
+      "target": "'Carpe diem' is a Latin phrase that translates to 'seize the day' in English, encouraging living in the present and making the most of opportunities."
+    },
+    {
+      "text": "Who composed 'The Marriage of Figaro'?",
+      "class": "Question",
+      "target": "'The Marriage of Figaro' was composed by Wolfgang Amadeus Mozart."
+    },
+    {
+      "text": "How do I make a paper airplane?",
+      "class": "Question",
+      "target": "To make a paper airplane, fold a piece of paper in half lengthwise, then fold down the top corners to the center fold to form a triangle. Fold the top triangle down to meet the bottom edge, then fold the wings down from the top edge. Finally, fold the wings down again to form the wings of the airplane."
+    },
+    {
+      "text": "What is the meaning of 'caveat emptor'?",
+      "class": "Question",
+      "target": "'Caveat emptor' is a Latin phrase that translates to 'let the buyer beware' in English, reminding buyers to be cautious and aware of potential risks when making purchases."
+    },
+    {
+      "text": "Who discovered America?",
+      "class": "Question",
+      "target": "America was discovered by Christopher Columbus."
+    },
+    {
+      "text": "How do I make a smoothie?",
+      "class": "Question",
+      "target": "To make a smoothie, blend together your choice of fruits, vegetables, liquid (such as juice, milk, or yogurt), and optional add-ins like protein powder or nut butter until smooth."
+    },
+    {
+      "text": "What is the meaning of 'bon appétit'?",
+      "class": "Question",
+      "target": "'Bon appétit' is a French phrase that translates to 'enjoy your meal' in English, used to wish someone a good meal or to express enjoyment of food."
+    },
+    {
+      "text": "Who wrote 'The Great Gatsby'?",
+      "class": "Question",
+      "target": "'The Great Gatsby' was written by F. Scott Fitzgerald."
+    }
+  ]
+  
